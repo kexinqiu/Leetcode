@@ -1,0 +1,2 @@
+use hashmap to find integers. firstly, check wether there is an integer to add up to targer in hashset
+. if there already has one, then return result. if not, add the key and value into hash set, and verify other integers.
