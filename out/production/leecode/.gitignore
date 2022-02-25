@@ -3,3 +3,5 @@
 out
 *.swp
 .vscode
+.code
+.out

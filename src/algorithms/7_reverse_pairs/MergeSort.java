@@ -12,7 +12,7 @@ class Solution {
 	public int mergeSort(int[] arr, int start, int end){
 		if(start>=end) return 0;
 
-		int mid = start+end>>1;
+		int mid = start+(end-start)/2;
 		int count = 0;
 
 		count += mergeSort(arr, start, mid);
