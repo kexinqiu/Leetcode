@@ -18,11 +18,13 @@ class Solution {
 		count += mergeSort(arr, start, mid);
 		count += mergeSort(arr, mid+1, end);
 
-		int k = 0;
+
 		int l = start;
 		int r = mid + 1;
-		int[] tmp = new int[end-start+1];
 
+		//process to find the count
+		//during the merge process, you will find all reverse pairs, because you will always compare the number on left
+		//with the number on the right
 		while(l<=mid && r<=end){
 			if((long)arr[l]>2*(long)arr[r]){
 				count+=mid-l+1;
@@ -30,8 +32,11 @@ class Solution {
 			}else l++;
 		}
 
+		//process to merge the array
+		int k = 0;
 		l = start;
 		r = mid+1;
+		int[] tmp = new int[end-start+1];
 
 		while(l<=mid && r<=end){
 			if(arr[l]<=arr[r]) tmp[k++]=arr[l++];
