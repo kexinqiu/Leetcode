@@ -1,0 +1,3 @@
+two pointer
+
+O(n)
