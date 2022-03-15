@@ -45,6 +45,11 @@
 | 38  | [417 Pacific Atlantic Water Flow](https://leetcode.com/problems/pacific-atlantic-water-flow/)                           | [Java](./algorithms/33_pacific_atlantic_water_flow/PacificAtlantic.java)                  | [medium]()                                                           | DFS                                           |
 | 39  | [322 Coin Change](https://leetcode.com/problems/coin-change/)                                                           | [Java](./algorithms/36_coin_change/CoinChange.java)                                       | [medium](./algorithms/36_coin_change/README.md)                      | bottom-up                                     |
 | 40  | [417 Coin Change2](https://leetcode.com/problems/pacific-atlantic-water-flow/)                                          | [Java](./algorithms/37_coin_change2/CoinChange.java)                                      | [medium](./algorithms/37_coin_change2/README.md)                     | bottom-up                                     |
+
+
+|1| sliding window 多用于 longest or shortest/ maximum or minimum substring
+|2| binary search 用于sorted array
+
 ### Fun Problems
 
 | topic | Title | Solution |
