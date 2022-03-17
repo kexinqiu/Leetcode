@@ -1,7 +1,7 @@
 class Solution {
 	public TreeNode invertTree(TreeNode root) {
 
-		if(root==0) return root;
+		if (root == null) return root;
 
 		//DFS go deep until null
 		TreeNode left = invertTree(root.left);
@@ -9,8 +9,9 @@ class Solution {
 
 		//swap
 		root.left = right;
-		root.right= left;
+		root.right = left;
 
 		return root;
 
 	}
+}
