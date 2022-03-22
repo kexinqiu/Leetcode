@@ -1,31 +1,6 @@
 import java.util.Arrays;
 import java.util.PriorityQueue;
 
-// because of Subscription, have not been run on leetcode
-//this is my method
-class Solution {
-	public int minMeetingRooms(int[][] intervals) {
-		if(intervals == null || intervals.length==0) return 0;
-
-		Arrays.sort(intervals, (arr1, arr2)->Integer.compare(arr1[0], arr2[0]));
-
-		int min_num = 1;
-
-		int preEnd = intervals[0][1];
-
-		for(int i=1;i< intervals.length;i++){
-			if(intervals[i][0]<preEnd){
-				min_num++;
-				preEnd=Math.min(intervals[i][1], preEnd);
-			}else{
-				preEnd = intervals[i][1];
-			}
-		}
-		return min_num;
-	}
-}
-
-//method on internet
 class Solution {
 	public int minMeetingRooms(int[][] intervals) {
 		if(intervals==null || intervals.length==0) return 0;

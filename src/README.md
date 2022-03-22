@@ -58,6 +58,12 @@
 | 51  | [105 Construct Binary Tree from Preorder and Inorder Traversal](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/)   | [Java](./algorithms/48_construct_BST_preorder_inorder/BuildTree.java)                     | [medium](./algorithms/48_construct_BST_preorder_inorder/README.md)   | DFS   inorder and reorder                      O(n)       |
 | 52  | [106 Construct Binary Tree from Inorder and Postorder Traversal](https://leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/) | [Java](./algorithms/49_construct_BST_inorder_postorder/BuildTree.java)                    | [medium](./algorithms/49_construct_BST_inorder_postorder/README.md)  | DFS   inorder and postorder                          O(n) |
 
+| [bucket sort / priorityQueue] : sort characters or integers by frequency or Top k by frequency |
+| 53  | [347 Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/)                                                                       | [Java](./algorithms/50_topK_freq_elements/topKFrequen.java)                               | [medium]()                                                           | hashmap + Bucket sort                         O(n)        |
+| 54  | [692 Top K Frequent Words](https://leetcode.com/problems/top-k-frequent-words/)                                                                             | [Java](./algorithms/51_topK_freq_words/topKFrequen.java)                                  | [medium](./algorithms/51_topK_freq_words/README.md)                  | hashmap + priorityqueue                       O(nlogk)    |
+| 55  | [451 Sort Characters By Frequency](https://leetcode.com/problems/sort-characters-by-frequency/)                                                             | [Java](./algorithms/52_sort_chars_by_freq/frequencySor.java)                              | [medium]()                                                           | hashmap + priorityqueue                       O(nlogn)    |
+
+
 |1| sliding window 多用于 longest or shortest/ maximum or minimum substring
 |2| binary search 用于sorted array
 
