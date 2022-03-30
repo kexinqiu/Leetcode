@@ -2,7 +2,7 @@ import javax.swing.tree.TreeNode;
 import java.util.LinkedList;
 import java.util.Queue;
 
-//recursion BSF
+//recursion DSF
 //TC:O(m+n) m is the number of nodes in subtree, n is the number of nodes in tree
 
 class Solution {

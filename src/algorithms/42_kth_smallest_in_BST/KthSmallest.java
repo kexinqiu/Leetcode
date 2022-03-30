@@ -1,3 +1,6 @@
+//BST   左边的node永远比右边的小， 因此kth smallest要dfs 从left subtree 开始
+
+//iteration
 class Solution {
 	public int kthSmallest(TreeNode root, int k) {
 
@@ -17,5 +20,25 @@ class Solution {
 			root = root.right;
 		}
 		return root.val;
+	}
+}
+
+//recursion DFS
+class Solution {
+	public int kthSmallest(TreeNode root, int k) {
+		ArrayList<Integer> array = inorder(root, new ArrayList<Integer>());
+		return array.get(k-1);
+	}
+
+	private ArrayList<Integer> inorder(TreeNode root, ArrayList<Integer> array){
+		//base case
+		if(root==null) return array;
+
+		inorder(root.left, array);
+		array.add(root.val);
+
+		inorder(root.right, array);
+
+		return array;
 	}
 }
