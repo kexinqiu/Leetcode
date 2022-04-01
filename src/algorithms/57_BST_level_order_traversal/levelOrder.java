@@ -19,15 +19,17 @@ class Solution {
 		while(!queue.isEmpty()){
 			List<Integer> level = new LinkedList<>();
 			//queue only contains nodes in same level
-			//so the size the number of the nodes in same level
+			//so the size equals the number of the nodes in same level
 			int size = queue.size();
 			//iterate every level
 			//for every level: first step, poll() and get the node, and then add it into the list
 			//second step, get the left subtree and right subtree of the node you removed, add them into queue;
 			for(int i=0;i<size;i++){
+				// fulfill the current level
 				TreeNode node = queue.poll();
 				level.add(node.val);
-
+				// add child nodes of the current level
+				// into the queue for the next level
 				if(node.left!=null) queue.add(node.left);
 				if(node.right!=null) queue.add(node.right);
 			}
@@ -56,13 +58,16 @@ class Solution {
 
 		int size = res.size();
 		//start the current level
+		////for same level, the operation will be executed only once
 		if(level==size){
 			res.add(new LinkedList<>());
 		}
 		//fulfil the current level
 		res.get(level).add(root.val);
 		//recursion
+		if(root.left!=null)
 		levelHelper(res, root.left, level+1);
+		if(root.right!=null)
 		levelHelper(res, root.right, level+1);
 	}
 }

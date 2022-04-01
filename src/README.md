@@ -89,6 +89,22 @@
 | 66  | recursion   DFS       O(n)                                                            | [236 Lowest Common Ancestor of a Binary Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/)               | [Java](./algorithms/62_lowest_common_ancester_BT/lowestCommonAncestor.java)  | [medium]()                                              |
 | 67  | hashset , traversing from node to root    O(n)                                        | [1650 Lowest Common Ancestor of a Binary Tree III](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree-iii/)      | [Java](./algorithms/63_lowest_common_ancester_BT3/lowestCommonAncestor.java) | [medium]()                                              |
 | 68  | recursion DFS    O(n)                                                                 | [366 Find Leaves of Binary Tree](https://leetcode.com/problems/find-leaves-of-binary-tree/)                                         | [Java](./algorithms/64_find_leaves_BT/findLeaves.java)                       | [medium]()                                              |
+| 69  | recursion DFS / iteration BFS    O(n)        ->102                                    | [199 Binary Tree Right Side View](https://leetcode.com/problems/binary-tree-right-side-view/)                                       | [Java](./algorithms/65_BT_right_side_view/rightSideView.java)                | [medium]()                                              |
+                    
+
+                                        Binary Tree Traversals
+                                    /                           \
+                                  DFS                            BFS
+              /                     |              \                    |
+          Preorder              Inorder           Postorder         Iterative with queue
+    /      |         \         /   |   \           /   |   \ 
+Iterative  Recursive  Morris   
+with stack                     
+
+
+
+
+
 
 |1| sliding window 多用于 longest or shortest/ maximum or minimum substring
 |2| binary search 用于sorted array
