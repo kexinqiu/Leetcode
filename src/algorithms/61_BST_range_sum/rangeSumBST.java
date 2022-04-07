@@ -2,26 +2,27 @@
 //traversing all nodes is not necessary, if the root value is less than the low, there is no need to check left subtree;
 //if the root value is large than the high, there is no need to check right subtree.
 
+//dfs iteration
 class Solution {
 	public int rangeSumBST(TreeNode root, int low, int high) {
 		Stack<TreeNode> stack = new Stack<>();
-		stack.push(root);
-
 		int sum = 0;
+		TreeNode node = root;
 
-		while(!stack.isEmpty()){
-			TreeNode node = stack.pop();
-			int n = node.val;
+		while(!stack.isEmpty()||node!=null){
+			while(node!=null){
+				stack.push(node);
+				node = node.left;
+			}
 
-			if(n>=low && n<=high) sum = sum + n;
-
-			if(node.left != null) stack.push(node.left);
-
-			if(node.right != null) stack.push(node.right);
+			node = stack.pop();
+			if(node.val>=low&&node.val<=high) sum = sum+node.val;
+			node = node.right;
 		}
 		return sum;
 	}
 }
+
 //iteration DFS 2
 class Solution {
 	public int rangeSumBST(TreeNode root, int low, int high) {

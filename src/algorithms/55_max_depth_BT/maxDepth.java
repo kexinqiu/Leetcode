@@ -1,6 +1,6 @@
 tc:O(N)
 
-//recursion dfs
+//recursion dfs postorder
 class Solution {
 	public int maxDepth(TreeNode root) {
 		//base case
@@ -13,8 +13,10 @@ class Solution {
 		//get maximum depth of root's left and right subtrees and add to 1
 		int left_height = maxDepth(root.left);
 		int right_height = maxDepth(root.right);
-		return Math.max(left_height, right_height)+1;
 
+		int max = Math.max(left_depth+1, right_depth+1);
+
+		return max;
 	}
 }
 
@@ -56,33 +58,32 @@ class Solution {
 		if (root == null) return 0;
 
 		int max = 1;
+		int depth = 0;
 
 		Stack<TreeNode> nodes = new Stack<>();
 		Stack<Integer> depths = new Stack<>();
 
-		nodes.push(root);
-		depths.push(1);
+		TreeNode node = root;
 
-		while (!nodes.empty()) {
-			TreeNode curr = nodes.pop();
-			int depth = depths.pop();
+		while (!nodes.empty()||node!=null) {
+			while(node!=null){
+				nodes.push(node);
+				depth = depth + 1;
+				depths.push(depth);
+
+				node = node.left;
+			}
+
+			node = nodes.pop();
+			depth = depths.pop();
 			//this is dfs, so we need to compare the depth of left subtree and right subtree
 			//for bfs, this is not necessary, because level first, we can always get max depth
-			if (curr.left == null && curr.right == null) {
+			if (node.left == null && node.right == null) {
 				max = Math.max(max, depth);
 			}
 
-			if (curr.right != null) {
-				nodes.push(curr.right);
-				depths.push(depth + 1);
-			}
-			if (curr.left != null) {
-				nodes.push(curr.left);
-				depths.push(depth + 1);
-			}
+			node = node.right;
 		}
-
 		return max;
-
 	}
 }
