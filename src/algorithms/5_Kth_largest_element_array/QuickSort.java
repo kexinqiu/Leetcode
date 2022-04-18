@@ -1,60 +1,34 @@
-//class Solution {
-//	public int findKthLargest(int[] nums, int k) {
-//
-//		quickSort(nums,0, nums.length-1);
-//		return nums[nums.length-k];
-//	}
-//
-//	public void quickSort(int[] arr, int start, int end){
-//
-//		if(start>=end) return;
-//
-//		int left = start-1;
-//		int right = end+1;
-//		int x = arr[start+end>>1];
-//
-//		while(left<right){
-//			do left++; while(arr[left]<x);
-//			do right--; while(arr[right]>x);
-//
-//			if(left<right){
-//				int tmp = arr[left];
-//				arr[left] = arr[right];
-//				arr[right] = tmp;
-//			}
-//		}
-//		quickSort(arr, start, right);
-//		quickSort(arr, right+1, end);
-//	}
-//}
-
 class Solution {
 	public int findKthLargest(int[] nums, int k) {
-		int m=0;
-		m=quickSort(nums,0, nums.length-1, k);
-		return m;
+		quickSort(nums, 0, nums.length-1);
+		return nums[nums.length-k];
 	}
 
-	public int quickSort(int[] arr, int start, int end, int k ){
-		if(start>=end) return arr[start];
+	private void swap(int[] nums, int i, int j){
+		int tmp = nums[i];
+		nums[i] = nums[j];
+		nums[j] = tmp;
+	}
 
-		int left = start-1;
-		int right = end+1;
-		int x = arr[left+right>>1];
+	private int partition(int[] nums, int l, int r){
+		int pivot = nums[r];
+		int i = l-1;
 
-		while(left<right){
-			do left++; while(arr[left]<x);
-			do right--; while(arr[right]>x);
-
-			if(left<right){
-				int tmp = arr[left];
-				arr[left] = arr[right];
-				arr[right] = tmp;
+		for(int j=l;j<r;j++){
+			if(nums[j]<=pivot){
+				i++;
+				swap(nums, i, j);
 			}
 		}
+		swap(nums, i+1, r);
+		return i+1;
+	}
 
-		int t = end-right+1;
-		if(t>k) return quickSort(arr, right+1, end,  k);
-		else return quickSort(arr, start, right, k-t+1);
+	private void quickSort(int[] nums, int l, int r){
+		if(l<r){
+			int pivot = partition(nums, l, r);
+			quickSort(nums, l, pivot-1);
+			quickSort(nums, pivot+1, r);
+		}
 	}
 }

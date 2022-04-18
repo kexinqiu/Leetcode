@@ -2,22 +2,25 @@ class Solution {
 	public int[] sortArray(int[] nums) {
 
 		mergeSort(nums, 0, nums.length-1);
-
 		return nums;
 	}
 
-	public static void mergeSort(int[] nums, int start, int end){
+	private void mergeSort(int[] nums, int start, int end){
 		if(start>=end) return;
 
-		int mid = start+end >> 1;
+		int mid = start+(end-start)/2;
 
 		mergeSort(nums, start, mid);
 		mergeSort(nums, mid+1, end);
 
-		int count = 0;
+		merge(nums, start, end, mid);
+	}
+
+	private void merge(int[] nums, int start, int end, int mid){
 		int left = start;
 		int right = mid+1;
 		int[] tmp = new int[end-start+1];
+		int count = 0;
 
 		while(left<=mid && right <=end){
 			if(nums[left]<nums[right]) tmp[count++]=nums[left++];
