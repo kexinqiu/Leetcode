@@ -1,3 +1,5 @@
+//1. divide
+//2. merge
 class Solution {
 	public ListNode sortList(ListNode head) {
 		//base case
@@ -32,7 +34,7 @@ class Solution {
 	ListNode merge(ListNode left_side, ListNode right_side) {
 		ListNode sorted_tmp = new ListNode(0);
 		ListNode current = sorted_tmp;
-
+		//merge smaller node into list
 		while (left_side != null && right_side != null) {
 			if (left_side.val < right_side.val) {
 				current.next = left_side;
@@ -43,7 +45,7 @@ class Solution {
 			}
 			current = current.next;
 		}
-
+		//add the rest node
 		if (left_side != null)
 			current.next = left_side;
 
