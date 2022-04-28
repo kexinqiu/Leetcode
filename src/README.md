@@ -71,11 +71,12 @@
 
 | String |         |
 
-| #   | Algorithms                                                       | Title                                                              | Solution                                                            | Difficulty                                         |
-|-----|------------------------------------------------------------------|--------------------------------------------------------------------|---------------------------------------------------------------------|----------------------------------------------------|
-| #   | 总结                                                               | basic code                                                         | [Java](./basic/tree/BT/README.md)                                   |                                                    |
-| 1   | hashmap O(n)                                                     | [242 Valid Anagram](https://leetcode.com/problems/valid-anagram/)  | [Java](./algorithms/19_valid_anagram/ValidAnagram.java)             | [easy](./algorithms/19_valid_anagram/README.md)    |
-| 2   | O(m*nlogn) (m is the length of str, n is the length of a string) | [49 Group Anagrams](https://leetcode.com/problems/group-anagrams/) | [Java](./algorithms/24_group_anagrams/GroupAnagrams.java)           | [medium](./algorithms/24_group_anagrams/README.md) |
+| #   | Algorithms                                                       | Title                                                                  | Solution                                                  | Difficulty                                         |
+|-----|------------------------------------------------------------------|------------------------------------------------------------------------|-----------------------------------------------------------|----------------------------------------------------|
+| 1   | hashmap O(n)                                                     | [242 Valid Anagram](https://leetcode.com/problems/valid-anagram/)      | [Java](./algorithms/19_valid_anagram/ValidAnagram.java)   | [easy](./algorithms/19_valid_anagram/README.md)    |
+| 2   | O(m*nlogn) (m is the length of str, n is the length of a string) | [49 Group Anagrams](https://leetcode.com/problems/group-anagrams/)     | [Java](./algorithms/24_group_anagrams/GroupAnagrams.java) | [medium](./algorithms/24_group_anagrams/README.md) |
+| 3   | O(1)                                                             | [13 Roman to Integer](https://leetcode.com/problems/roman-to-integer/) | [Java](./algorithms/79_roman_to_integer/romanToInt.java)  | [easy]()                                           |
+| 4   | O(1)                                                             | [12 Integer to Roman](https://leetcode.com/problems/integer-to-roman/) | [Java](./algorithms/80_integer_to_roman/intToRoman.java)  | [easy]()                                           |
 
 
 | Sorting |         
@@ -147,6 +148,23 @@
                index
           / left       \right
        index*2+1     index*2+2
+
+
+| Math |         |
+
+| #   | Algorithms | Title                                                                  | Solution                                             | Difficulty   |
+|-----|------------|------------------------------------------------------------------------|------------------------------------------------------|--------------|
+| 1   | O(log n)   | [7 Reverse Integer](https://leetcode.com/problems/reverse-integer/)    | [Java](./algorithms/81_reverse_integer/reverse.java) | [medium]()   |
+
+
+| Data stream |         |
+
+| #      | Algorithms                 | Title                                                                                           | Solution                                                               | Difficulty |
+|--------|----------------------------|-------------------------------------------------------------------------------------------------|------------------------------------------------------------------------|------------|
+| [sort] |                            |                                                                                                 |                                                                        |            |
+| 1      | two priorityqueue O(log n) | [295 Find Median from Data Stream](https://leetcode.com/problems/find-median-from-data-stream/) | [Java](./algorithms/82_find_median_from_data_stream/MedianFinder.java) | [medium]() |
+
+
 
 
 |1| sliding window 多用于 longest or shortest/ maximum or minimum substring
