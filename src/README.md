@@ -79,6 +79,24 @@
 | 4   | O(1)                                                             | [12 Integer to Roman](https://leetcode.com/problems/integer-to-roman/) | [Java](./algorithms/80_integer_to_roman/intToRoman.java)  | [easy]()                                           |
 
 
+| Data stream |         |
+
+| #      | Algorithms                 | Title                                                                                           | Solution                                                               | Difficulty |
+|--------|----------------------------|-------------------------------------------------------------------------------------------------|------------------------------------------------------------------------|------------|
+| [sort] |                            |                                                                                                 |                                                                        |            |
+| 1      | two priorityqueue O(log n) | [295 Find Median from Data Stream](https://leetcode.com/problems/find-median-from-data-stream/) | [Java](./algorithms/82_find_median_from_data_stream/MedianFinder.java) | [medium]() |
+
+
+| Backtracking |  DFS(recursion)   |
+
+| #      | Algorithms      | Title                                                                   | Solution                                                      | Difficulty |
+|--------|-----------------|-------------------------------------------------------------------------|---------------------------------------------------------------|------------|
+| [sort] |                 |                                                                         |                                                               |            |
+| 1      | DFS O(N(T/M)+1) | [39 Combination Sum](https://leetcode.com/problems/combination-sum/)    | [Java](./algorithms/83_combination_sum/combinationSum.java)   | [medium]() |
+| 2      | DFS O(2^N)      | [40 Combination Sum](https://leetcode.com/problems/combination-sum-ii/) | [Java](./algorithms/84_combination_sum2/combinationSum2.java) | [medium]() |
+
+
+
 | Sorting |         
 
 | #       | Algorithms                                                                                            | Title                                                                                              | Solution                                                               | Difficulty                                                   |
@@ -156,13 +174,6 @@
 |-----|------------|------------------------------------------------------------------------|------------------------------------------------------|--------------|
 | 1   | O(log n)   | [7 Reverse Integer](https://leetcode.com/problems/reverse-integer/)    | [Java](./algorithms/81_reverse_integer/reverse.java) | [medium]()   |
 
-
-| Data stream |         |
-
-| #      | Algorithms                 | Title                                                                                           | Solution                                                               | Difficulty |
-|--------|----------------------------|-------------------------------------------------------------------------------------------------|------------------------------------------------------------------------|------------|
-| [sort] |                            |                                                                                                 |                                                                        |            |
-| 1      | two priorityqueue O(log n) | [295 Find Median from Data Stream](https://leetcode.com/problems/find-median-from-data-stream/) | [Java](./algorithms/82_find_median_from_data_stream/MedianFinder.java) | [medium]() |
 
 
 
