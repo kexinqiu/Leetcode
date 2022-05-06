@@ -49,7 +49,8 @@ class Solution {
 		}
 
 		for(int i=start;i<candidates.length;i++){
-			if(remain<0) break;
+			// 大剪枝：减去 candidates[i] 小于 0，减去后面的 candidates[i + 1]、candidates[i + 2] 肯定也小于 0，因此用 break
+			if(remain-candidates[i]<0) break;
 
 			// add the number into the combination
 			comb.add(candidates[i]);

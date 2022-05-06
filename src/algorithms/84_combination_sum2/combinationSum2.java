@@ -18,7 +18,7 @@ class Solution {
 
 		for(int i=start;i<candidates.length;i++){
 			// 大剪枝：减去 candidates[i] 小于 0，减去后面的 candidates[i + 1]、candidates[i + 2] 肯定也小于 0，因此用 break
-			if(remain<0) break;
+			if(remain-candidates[i]<0) break;
 			//skip duplicates
 			// 小剪枝：同一层相同数值的结点，从第 2 个开始，候选数更少，结果一定发生重复，因此跳过，用 continue
 			//i>start 保证了同一层级不会出现两次同样的

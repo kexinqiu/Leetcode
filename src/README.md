@@ -89,11 +89,13 @@
 
 | Backtracking |  DFS(recursion)   |
 
-| #      | Algorithms      | Title                                                                   | Solution                                                      | Difficulty |
-|--------|-----------------|-------------------------------------------------------------------------|---------------------------------------------------------------|------------|
-| [sort] |                 |                                                                         |                                                               |            |
-| 1      | DFS O(N(T/M)+1) | [39 Combination Sum](https://leetcode.com/problems/combination-sum/)    | [Java](./algorithms/83_combination_sum/combinationSum.java)   | [medium]() |
-| 2      | DFS O(2^N)      | [40 Combination Sum](https://leetcode.com/problems/combination-sum-ii/) | [Java](./algorithms/84_combination_sum2/combinationSum2.java) | [medium]() |
+| #   | Algorithms              | Title                                                                         | Solution                                                      | Difficulty |
+|-----|-------------------------|-------------------------------------------------------------------------------|---------------------------------------------------------------|------------|
+|     |                         |                                                                               |                                                               |            |
+| 1   | DFS O(N(T/M)+1)         | [39 Combination Sum](https://leetcode.com/problems/combination-sum/)          | [Java](./algorithms/83_combination_sum/combinationSum.java)   | [medium]() |
+| 2   | DFS O(2^N)              | [40 Combination Sum II](https://leetcode.com/problems/combination-sum-ii/)    | [Java](./algorithms/84_combination_sum2/combinationSum2.java) | [medium]() |
+| 3   | DFS O(9!/(k! * (9-k)!)) | [216 Combination Sum III](https://leetcode.com/problems/combination-sum-iii/) | [Java](./algorithms/85_combination_sum3/combinationSum3.java) | [medium]() |
+| 4   | DFS O(n!/(k! * (n-k)!)) | [77 Combinations](https://leetcode.com/problems/combinations/)                | [Java](./algorithms/86_combinations/combine.java)             | [medium]() |
 
 
 
