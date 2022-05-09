@@ -101,6 +101,9 @@
 | [subsets]     |                     |                                                                                                                  |                                                                               |            |
 | 6             | O(2^N*N)            | [78 Subsets](https://leetcode.com/problems/subsets/)                                                             | [Java](./algorithms/88_subsets/subsets.java)                                  | [medium]() |
 | 7             | O(2^N*N)            | [90 Subsets II](https://leetcode.com/problems/subsets-ii/)                                                       | [Java](./algorithms/89_subsets/subsets2.java)                                 | [medium]() |
+| [permutation] |                     |                                                                                                                  |                                                                               |            |
+| 8             | O(2^N*N)            | [46 Permutations](https://leetcode.com/problems/permutations/)                                                   | [Java](./algorithms/90_permutations/permute.java)                             | [medium]() |
+| 9             | O(2^N*N)            | [47 Permutations II](https://leetcode.com/problems/permutations-ii/)                                             | [Java](./algorithms/91_permutations2/permuteUnique.java)                      | [medium]() |
 
 
 
