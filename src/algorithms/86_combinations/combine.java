@@ -1,4 +1,4 @@
-////O(C(n,k)) = O(n!/(k! * (n-k)!)
+//O(C(n,k)) = O(n!/(k! * (n-k)!)
 
 
 class Solution {

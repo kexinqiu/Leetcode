@@ -104,6 +104,9 @@
 | [permutation] |                     |                                                                                                                  |                                                                               |            |
 | 8             | O(2^N*N)            | [46 Permutations](https://leetcode.com/problems/permutations/)                                                   | [Java](./algorithms/90_permutations/permute.java)                             | [medium]() |
 | 9             | O(2^N*N)            | [47 Permutations II](https://leetcode.com/problems/permutations-ii/)                                             | [Java](./algorithms/91_permutations2/permuteUnique.java)                      | [medium]() |
+| [partition]   |                     |                                                                                                                  |                                                                               |            |
+| 10            | O(2^N*N)            | [131 Palindrome Partitioning](https://leetcode.com/problems/palindrome-partitioning/)                            | [Java](./algorithms/92_palindrome_partitioning/partition.java)                | [medium]() |
+| 11            |                     | [93. Restore IP Addresses](https://leetcode.com/problems/restore-ip-addresses/)                                  | [Java](./algorithms/93_restore_IP/restoreIP.java)                             | [medium]() |
 
 
 
