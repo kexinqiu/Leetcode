@@ -140,10 +140,12 @@ Data Structure:
 
 | Linked List |         |
 
-| #   | Algorithms        | Title                                                                                         | Solution                                                              | Difficulty                                         |
-|-----|-------------------|-----------------------------------------------------------------------------------------------|-----------------------------------------------------------------------|----------------------------------------------------|
-|     | [Remove elements] |                                                                                               |                                                                       |                                                               |
-| 1   | O(N)              | [203 Remove Linked List Elements](https://leetcode.com/problems/remove-linked-list-elements/) | [Java](./algorithms/94_remove_linkedlist_element/removeElements.java) | [easy](./algorithms/19_valid_anagram/README.md)    |
+| #   | Algorithms           | Title                                                                                         | Solution                                                              | Difficulty   |
+|-----|----------------------|-----------------------------------------------------------------------------------------------|-----------------------------------------------------------------------|--------------|
+|     | [Design Linked List] | [singly and doubly]                                                                           |                                                                       |              |
+| 1   | O(N)                 | [707 Design Linked List](https://leetcode.com/problems/design-linked-list/)                   | [Java](./algorithms/95_design_linked_list/designLinkedList.java)      | [medium]()   |
+|     | [Remove elements]    |                                                                                               |                                                                       |              |
+| 1   | O(N)                 | [203 Remove Linked List Elements](https://leetcode.com/problems/remove-linked-list-elements/) | [Java](./algorithms/94_remove_linkedlist_element/removeElements.java) | [easy]()     |
 
 
 | Data stream |         |

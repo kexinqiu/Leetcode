@@ -72,4 +72,92 @@ class MyLinkedList {
 }
 
 //doublly linked list
+class MyLinkedList {
 
+	class ListNode{
+		int val;
+		ListNode next, prev;
+
+		public ListNode(int val){
+			this.val = val;
+		}
+	}
+
+	int size;
+	//虚拟头结点 sentinel head
+	ListNode head, tail;
+
+	public MyLinkedList() {
+		size = 0;
+		head = new ListNode(0);
+		tail = new ListNode(0);
+		head.next = tail;
+		tail.prev = head;
+	}
+
+	public int get(int index) {
+		if(index<0||index>=size) return -1;
+		ListNode curr;
+		if(index<(size-1)/2){
+			curr = head;
+			for(int i=0;i<=index;i++){
+				curr = curr.next;
+			}
+		}else{
+			curr = tail;
+			for(int i=0;i<=size-index-1;i++){
+				curr = curr.prev;
+			}
+		}
+		return curr.val;
+	}
+
+	public void addAtHead(int val) {
+		ListNode toAdd = new ListNode(val);
+		ListNode curr = head;
+		toAdd.next = curr.next;
+		curr.next.prev = toAdd;
+		curr.next = toAdd;
+		toAdd.prev = curr;
+		size++;
+	}
+
+	public void addAtTail(int val) {
+		ListNode toAdd = new ListNode(val);
+		ListNode curr = tail;
+		toAdd.next = curr;
+		toAdd.prev = curr.prev;
+		curr.prev.next = toAdd;
+		curr.prev = toAdd;
+		size++;
+	}
+
+	public void addAtIndex(int index, int val) {
+		if(index>size) return;
+		if(index<0) index=0;
+		ListNode curr = head;
+		for(int i=0;i<index;i++){
+			curr = curr.next;
+		}
+		ListNode toAdd = new ListNode(val);
+
+		toAdd.next = curr.next;
+		curr.next.prev = toAdd;
+		toAdd.prev = curr;
+		curr.next = toAdd;
+		size++;
+	}
+
+	public void deleteAtIndex(int index) {
+		if(index<0 || index>=size) return;
+		ListNode curr = head;
+		for(int i=0;i<index;i++){
+			curr = curr.next;
+		}
+		//注意先后顺序，如果先写curr.next = curr.next.next
+		//再写curr.next.next.prev， 此时curr.next已经发生改变
+		curr.next.next.prev = curr;
+		curr.next = curr.next.next;
+		size--;
+	}
+}
