@@ -26,7 +26,6 @@
 | 34  | two pointer O(n)                                                  | [Container with most water](https://leetcode.com/problems/container-with-most-water/)                                   | [Java](./algorithms/25_container_most_water/MaxArea.java)                                 | [medium](./algorithms/25_container_most_water/README.md)             |
 | 35  | binary search O(logn)  sorted array 是信号                           | [Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/)             | [Java](./algorithms/26_find_min_in_rotated_sorted_array/FindMin.java)                     | [medium](./algorithms/26_find_min_in_rotated_sorted_array/README.md) |
 | 36  | two pointer O(n)                                                  | [LinkedList Cycle](https://leetcode.com/problems/linked-list-cycle/)                                                    | [Java](./algorithms/27_linkedList_cycle/hasCycle.java)                                    | [easy]()                                                             |
-| 37  |                                                                   | [Reverse LinkedList](https://leetcode.com/problems/reverse-linked-list/)                                                | [Java](./algorithms/28_reverse_LinkedList/ReverseLinkedList.java)                         | [easy]()                                                             |
 | 38  | sliding window  / two pointers      O(n)                          | [Longest Substring Without Repeating](https://leetcode.com/problems/longest-substring-without-repeating-characters/)    | [Java](./algorithms/29_longest_substring_without_repeating/lengthOfLongestSubstring.java) | [medium]()                                                           |
 | 39  | sliding window  / two pointers      O(n)                          | [Longest Repeating Character Replacement](https://leetcode.com/problems/longest-repeating-character-replacement/)       | [Java](./algorithms/30_longest_repeating_replacement/characterReplacement.java)           | [medium]()                                                           |
 | 40  |                                                                   | [Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/)                     | [Java](./algorithms/31_remove_nth_node_from_end/RemoveNthFromEnd.java)                    | [medium](./algorithms/31_remove_nth_node_from_end/README.md)         |
@@ -140,12 +139,15 @@ Data Structure:
 
 | Linked List |         |
 
-| #   | Algorithms           | Title                                                                                         | Solution                                                              | Difficulty   |
-|-----|----------------------|-----------------------------------------------------------------------------------------------|-----------------------------------------------------------------------|--------------|
-|     | [Design Linked List] | [singly and doubly]                                                                           |                                                                       |              |
-| 1   | O(N)                 | [707 Design Linked List](https://leetcode.com/problems/design-linked-list/)                   | [Java](./algorithms/95_design_linked_list/designLinkedList.java)      | [medium]()   |
-|     | [Remove elements]    |                                                                                               |                                                                       |              |
-| 1   | O(N)                 | [203 Remove Linked List Elements](https://leetcode.com/problems/remove-linked-list-elements/) | [Java](./algorithms/94_remove_linkedlist_element/removeElements.java) | [easy]()     |
+| #   | Algorithms            | Title                                                                                         | Solution                                                              | Difficulty |
+|-----|-----------------------|-----------------------------------------------------------------------------------------------|-----------------------------------------------------------------------|------------|
+|     | [Design Linked List]  | [singly and doubly]                                                                           |                                                                       |            |
+| 1   | O(N)                  | [707 Design Linked List](https://leetcode.com/problems/design-linked-list/)                   | [Java](./algorithms/95_design_linked_list/designLinkedList.java)      | [medium]() |
+|     | [Remove elements]     |                                                                                               |                                                                       |            |
+| 2   | O(N)                  | [203 Remove Linked List Elements](https://leetcode.com/problems/remove-linked-list-elements/) | [Java](./algorithms/94_remove_linkedlist_element/removeElements.java) | [easy]()   |
+|     | [Reverse Linked List] |                                                                                               |                                                                       |            |
+| 3   | O(N)                  | [206 Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/)                 | [Java](./algorithms/28_reverse_LinkedList/ReverseLinkedList.java)     | [easy]()   |
+| 4   | O(N)                  | [92 Reverse Linked List II](https://leetcode.com/problems/reverse-linked-list-ii/)            | [Java](./algorithms/96_reverse_linked_list2/reverseBetween.java)      | [medium]() |
 
 
 | Data stream |         |
