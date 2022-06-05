@@ -144,10 +144,12 @@ Data Structure:
 |     | [Design Linked List]  | [singly and doubly]                                                                           |                                                                       |            |
 | 1   | O(N)                  | [707 Design Linked List](https://leetcode.com/problems/design-linked-list/)                   | [Java](./algorithms/95_design_linked_list/designLinkedList.java)      | [medium]() |
 |     | [Remove elements]     |                                                                                               |                                                                       |            |
-| 2   | O(N)                  | [203 Remove Linked List Elements](https://leetcode.com/problems/remove-linked-list-elements/) | [Java](./algorithms/94_remove_linkedlist_element/removeElements.java) | [easy]()   |
+| 2   | O(N)   dummy node     | [203 Remove Linked List Elements](https://leetcode.com/problems/remove-linked-list-elements/) | [Java](./algorithms/94_remove_linkedlist_element/removeElements.java) | [easy]()   |
 |     | [Reverse Linked List] |                                                                                               |                                                                       |            |
 | 3   | O(N)                  | [206 Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/)                 | [Java](./algorithms/28_reverse_LinkedList/ReverseLinkedList.java)     | [easy]()   |
 | 4   | O(N)                  | [92 Reverse Linked List II](https://leetcode.com/problems/reverse-linked-list-ii/)            | [Java](./algorithms/96_reverse_linked_list2/reverseBetween.java)      | [medium]() |
+|     | [Swap nodes in pairs] |                                                                                               |                                                                       |            |
+| 3   | O(N)                  | [24 Swap Nodes in Pairs](https://leetcode.com/problems/swap-nodes-in-pairs/)                  | [Java](./algorithms/97_swap_nodes_in_pairs/swapPairs.java)            | [medium]() |
 
 
 | Data stream |         |
