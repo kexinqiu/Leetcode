@@ -32,26 +32,26 @@ class Solution {
 	}
 
 	ListNode merge(ListNode left_side, ListNode right_side) {
-		ListNode sorted_tmp = new ListNode(0);
-		ListNode current = sorted_tmp;
+		ListNode res = new ListNode(0);
+		ListNode curr = res;
 		//merge smaller node into list
 		while (left_side != null && right_side != null) {
 			if (left_side.val < right_side.val) {
-				current.next = left_side;
+				curr.next = left_side;
 				left_side = left_side.next;
 			} else {
-				current.next = right_side;
+				curr.next = right_side;
 				right_side = right_side.next;
 			}
-			current = current.next;
+			curr = curr.next;
 		}
 		//add the rest node
 		if (left_side != null)
-			current.next = left_side;
+			curr.next = left_side;
 
 		if (right_side != null)
-			current.next = right_side;
+			curr.next = right_side;
 
-		return sorted_tmp.next;
+		return res.next;
 	}
 }

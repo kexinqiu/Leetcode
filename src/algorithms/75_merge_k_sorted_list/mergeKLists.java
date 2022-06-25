@@ -29,9 +29,11 @@ class Solution {
 //o(nlogk) k is the number of linked lists; n is the total number of nodes in list.
 class Solution {
 	public ListNode mergeKLists(ListNode[] lists) {
+		//先小后大
 		PriorityQueue<ListNode> queue = new PriorityQueue<>(new The_Comparator());
 		//PriorityQueue queue = new PriorityQueue<>((o1, o2) -> o1.val - o2.val);
 
+		//比较list第一个node值
 		for(ListNode ln : lists){
 			if(ln!=null){
 				queue.add(ln);
@@ -40,6 +42,7 @@ class Solution {
 
 		ListNode res = new ListNode(0);
 		ListNode curr = res;
+		//每次只取到每一个list第一个node，因为只有第一个node值排好序，将next的node再次存入queue中排序，再次取出，重复，直到queue为空
 		while(!queue.isEmpty()){
 			curr.next=queue.poll();
 			curr = curr.next;
@@ -109,15 +112,14 @@ class Solution {
 
 		int interval = 1;
 		while(interval<lists.length){
-
+			//第一轮merge，merge的两个list相隔1，与第二对merge起始的list相隔2
+			//第二轮merge，merge的是相隔2的两个list，与第二对merge起始的list相隔4
 			for (int i = 0; i + interval< lists.length; i=i+interval*2) {
 				lists[i]=merge(lists[i],lists[i+interval]);
 			}
 			interval*=2;
 		}
-
 		return lists[0];
-
 	}
 
 	private ListNode merge(ListNode left_side, ListNode right_side){
