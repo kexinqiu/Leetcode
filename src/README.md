@@ -95,6 +95,14 @@ Algorithms：
 
 
 
+| Math  |        |
+
+| #   | Algorithms                         | Title                                                                      | Solution                                            | Difficulty |
+|-----|------------------------------------|----------------------------------------------------------------------------|-----------------------------------------------------|------------|
+| 1   | hashset/slow fast pointers O(logn) | [202 Happy Number](https://leetcode.com/problems/happy-number/)            | [Java](./algorithms/105_happy_numbers/isHappy.java) | [easy]()   |
+
+
+
 Data Structure:
 
 | Array  |        |
@@ -177,10 +185,11 @@ Data Structure:
 | Hash Table |  数组就是简化的哈希表       |
 一般哈希表都是用来快速判断一个元素是否出现集合里,要枚举的话时间复杂度是O(n)，但如果使用哈希表的话， 只需要O(1)就可以做到。
 
-| #   | Algorithms   | Title                                                                                       | Solution                                                          | Difficulty                                      |
-|-----|--------------|---------------------------------------------------------------------------------------------|-------------------------------------------------------------------|-------------------------------------------------|
-| 1   | hashmap O(n) | [242 Valid Anagram](https://leetcode.com/problems/valid-anagram/)                           | [Java](./algorithms/19_valid_anagram/ValidAnagram.java)           | [easy](./algorithms/19_valid_anagram/README.md) |
-| 2   | hashset O(n) | [349 Intersection of Two Arrays](https://leetcode.com/problems/intersection-of-two-arrays/) | [Java](./algorithms/104_intersection_of_arrays/intersection.java) | [easy]()                                        |
+| #   | Algorithms                         | Title                                                                                       | Solution                                                          | Difficulty                                      |
+|-----|------------------------------------|---------------------------------------------------------------------------------------------|-------------------------------------------------------------------|-------------------------------------------------|
+| 1   | hashmap O(n)                       | [242 Valid Anagram](https://leetcode.com/problems/valid-anagram/)                           | [Java](./algorithms/19_valid_anagram/ValidAnagram.java)           | [easy](./algorithms/19_valid_anagram/README.md) |
+| 2   | hashset O(n)                       | [349 Intersection of Two Arrays](https://leetcode.com/problems/intersection-of-two-arrays/) | [Java](./algorithms/104_intersection_of_arrays/intersection.java) | [easy]()                                        |
+| 3   | hashset/slow fast pointers O(logn) | [202 Happy Number](https://leetcode.com/problems/happy-number/)                             | [Java](./algorithms/105_happy_numbers/isHappy.java)               | [easy]()                                        |
 
 
 
