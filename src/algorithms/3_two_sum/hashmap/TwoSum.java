@@ -1,6 +1,8 @@
 import java.util.HashMap;
 import java.util.Map;
 
+//不能用arrays.sort 因为无法获取index
+
 class TwoSum {
 	public int[] twoSum(int[] nums, int target) {
 		Map<Integer, Integer> num_map = new HashMap<>();
