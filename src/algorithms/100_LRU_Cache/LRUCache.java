@@ -115,19 +115,19 @@ class LRUCache {
 	public void put(int key, int value) {
 		//如果已经有该数据，直接更新
 		if(map.containsKey(key)){
-			Node node = new Node(key, value);
 			// 删除旧的数据
 			deleteKey(key);
 			// 新插入的数据为最近使用的数据
 			addRecently(key, value);
+		}else{
+			//如果没有这个数据
+			//首先判断是否已满，如果已满，删除最久未使用的数据
+			if(capacity==cache.getSize()){
+				removeLeastRecently();
+			}
+			//添加最新的数据
+			addRecently(key, value);
 		}
-		//如果没有这个数据
-		//首先判断是否已满，如果已满，删除最久未使用的数据
-		if(capacity==cache.getSize()){
-			removeLeastRecently();
-		}
-		//添加最新的数据
-		addRecently(key, value);
 	}
 }
 
