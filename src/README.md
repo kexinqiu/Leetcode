@@ -139,12 +139,15 @@ Data Structure:
 
 | String |         |
 
-| #   | Algorithms                                                       | Title                                                                  | Solution                                                  | Difficulty                                         |
-|-----|------------------------------------------------------------------|------------------------------------------------------------------------|-----------------------------------------------------------|----------------------------------------------------|
-| 1   | 1.hashmap O(n)  2.array o(n)                                     | [242 Valid Anagram](https://leetcode.com/problems/valid-anagram/)      | [Java](./algorithms/19_valid_anagram/ValidAnagram.java)   | [easy](./algorithms/19_valid_anagram/README.md)    |
-| 2   | O(m*nlogn) (m is the length of str, n is the length of a string) | [49 Group Anagrams](https://leetcode.com/problems/group-anagrams/)     | [Java](./algorithms/24_group_anagrams/GroupAnagrams.java) | [medium](./algorithms/24_group_anagrams/README.md) |
-| 3   | O(1)                                                             | [13 Roman to Integer](https://leetcode.com/problems/roman-to-integer/) | [Java](./algorithms/79_roman_to_integer/romanToInt.java)  | [easy]()                                           |
-| 4   | O(1)                                                             | [12 Integer to Roman](https://leetcode.com/problems/integer-to-roman/) | [Java](./algorithms/80_integer_to_roman/intToRoman.java)  | [easy]()                                           |
+| #   | Algorithms                                                       | Title                                                                     | Solution                                                   | Difficulty                                         |
+|-----|------------------------------------------------------------------|---------------------------------------------------------------------------|------------------------------------------------------------|----------------------------------------------------|
+| 1   | 1.hashmap O(n)  2.array o(n)                                     | [242 Valid Anagram](https://leetcode.com/problems/valid-anagram/)         | [Java](./algorithms/19_valid_anagram/ValidAnagram.java)    | [easy](./algorithms/19_valid_anagram/README.md)    |
+| 2   | O(m*nlogn) (m is the length of str, n is the length of a string) | [49 Group Anagrams](https://leetcode.com/problems/group-anagrams/)        | [Java](./algorithms/24_group_anagrams/GroupAnagrams.java)  | [medium](./algorithms/24_group_anagrams/README.md) |
+| 3   | O(1)                                                             | [13 Roman to Integer](https://leetcode.com/problems/roman-to-integer/)    | [Java](./algorithms/79_roman_to_integer/romanToInt.java)   | [easy]()                                           |
+| 4   | O(1)                                                             | [12 Integer to Roman](https://leetcode.com/problems/integer-to-roman/)    | [Java](./algorithms/80_integer_to_roman/intToRoman.java)   | [easy]()                                           |
+|     | [reverse string]                                                 |                                                                           |                                                            |                                                    |
+| 5   | two pointers - swap O(n)                                         | [344 Reverse String](https://leetcode.com/problems/reverse-string/)       | [Java](./algorithms/107_reverse_string/reverseString.java) | [easy]()                                           |
+| 6   | two pointers - swap O(n)                                         | [541 Reverse String II](https://leetcode.com/problems/reverse-string-ii/) | [Java](./algorithms/108_reverse_string2/reverseStr.java)   | [easy]()                                           |
 
 
 | Linked List |         |
@@ -182,7 +185,7 @@ Data Structure:
 | 18  | reverse    sc:o(n)                       | [234. Palindrome Linked List](https://leetcode.com/problems/palindrome-linked-list/)                   | [Java](./algorithms/72_sort_list/sortList.java)                        | [medium]()                                                   |
 
 
-| Hash Table |  数组就是简化的哈希表       |
+| Hash Table |  数组就是简化的哈希表 ; set; map      |
 一般哈希表都是用来快速判断一个元素是否出现集合里,要枚举的话时间复杂度是O(n)，但如果使用哈希表的话， 只需要O(1)就可以做到。
 
 | #   | Algorithms                         | Title                                                                                       | Solution                                                          | Difficulty                                       |
