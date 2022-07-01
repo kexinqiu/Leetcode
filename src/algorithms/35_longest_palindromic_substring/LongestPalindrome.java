@@ -1,5 +1,8 @@
-class Solution {
+//中心扩散
+//tc o(n*n)
+//sc:o(1)
 
+class Solution {
 	public String longestPalindrome(String s) {
 		if(s==null || s.length()==0) return "";
 
@@ -7,7 +10,9 @@ class Solution {
 		int end=0;
 		//expand from the midpoint, return the length of a palindrome
 		for(int i=0;i<s.length();i++){
+			//奇数字符串
 			int len1 = extendPalindrome(s, i, i);
+			/偶数字符串
 			int len2 = extendPalindrome(s, i, i+1);
 			//get the length of longest palindrome
 			int max_len = Math.max(len1, len2);
@@ -32,3 +37,5 @@ class Solution {
 		return max_length;
 	}
 }
+
+//dp
