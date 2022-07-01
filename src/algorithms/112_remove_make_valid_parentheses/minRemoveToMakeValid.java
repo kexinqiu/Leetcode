@@ -4,6 +4,8 @@
 //若为'('，先进栈（栈中存的是下标），并且标记为无效的(单个(无效)
 //若为')', 若为空，无效；若不为空，则可组成合法括号，并将栈修正为合法
 
+//tc:o(n)
+//sc:o(n)
 class Solution {
 	public String minRemoveToMakeValid(String s) {
 		Stack<Integer> stack = new Stack<>();
@@ -17,7 +19,7 @@ class Solution {
 			}
 
 			if(s.charAt(i) == ')') {
-				if(!stack.isEmpty()){
+				if(!stack.empty()){
 					invalidIndex[stack.pop()] = false;
 				}
 				else invalidIndex[i] = true;
