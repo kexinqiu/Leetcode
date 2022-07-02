@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.Comparator;
 
 // because of Subscription, have not been run on leetcode
 class Solution {
@@ -6,6 +7,13 @@ class Solution {
 		if(intervals == null || intervals.length==0) return true;
 
 		Arrays.sort(intervals, (arr1, arr2)->Integer.compare(arr1[0], arr2[0]));
+
+//		Arrays.sort(intervals, new Comparator<int[]>() {
+//			@Override
+//			public int compare(int[] o1, int[] o2) {
+//				return o1[0]-o2[0];
+//			}
+//		});
 
 		int preEnd = intervals[0][1];
 

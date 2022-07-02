@@ -1,3 +1,31 @@
+//greedy
+//o(n)logn, Sorting Interval.end in ascending order is O(nlogn), then traverse intervals array is O(n).
+class Solution {
+	public int eraseOverlapIntervals(int[][] intervals) {
+		if(intervals.length==0) return 0;
+
+		Arrays.sort(intervals, new Comparator<int[]>(){
+			@Override
+			public int compare(int[] o1, int[] o2){
+				return o1[1]-o2[1];
+			}
+		});
+
+		int count = 0;
+
+		int preEnd = intervals[0][1];
+
+		for(int i=1; i<intervals.length;i++){
+			if(preEnd>intervals[i][0]){
+				count++;
+			}else{
+				preEnd = intervals[i][1];
+			}
+		}
+		return count;
+	}
+}
+
 class Solution {
 	public int eraseOverlapIntervals(int[][] intervals) {
 
