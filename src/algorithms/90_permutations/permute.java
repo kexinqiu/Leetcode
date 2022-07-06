@@ -6,6 +6,7 @@ class Solution {
 		List<List<Integer>> res = new ArrayList<>();
 		if (nums.length == 0) return res;
 		//not necessary
+		//if elements are not unique and result can't contain duplication, then we have to sort
 		Arrays.sort(nums);
 		backtrack(res, nums, new ArrayList<>(), 0);
 		return res;

@@ -6,8 +6,13 @@
 //
 //The total time complexity is therefore equal to O(NlogN).
 
+//按照start time排序往pq里插入，按照end time在pq内部进行排序，保证局部最优
+//每一次叠加profit，都先找到目前profit最大的那条
+
 class Solution {
 	class The_Comparator implements Comparator<ArrayList<Integer>> {
+		//ascending
+		@Override
 		public int compare(ArrayList<Integer> list1, ArrayList<Integer> list2) {
 			return list1.get(0) - list2.get(0);
 		}
@@ -16,6 +21,7 @@ class Solution {
 	private int findMaxProfit(List<List<Integer>> jobs) {
 		int n = jobs.size(), maxProfit = 0;
 		// min heap having {endTime, profit}
+		//按照start time排序往pq里插入，按照end time在pq内部进行排序，可以保证如果start time满足，那么后面一定满足
 		PriorityQueue<ArrayList<Integer>> pq = new PriorityQueue<>(new The_Comparator());
 
 		for (int i = 0; i < n; i++) {
@@ -24,7 +30,7 @@ class Solution {
 			// keep popping while the heap is not empty and
 			// jobs are not conflicting
 			// update the value of maxProfit
-			while (pq.isEmpty() == false && start >= pq.peek().get(0)) {
+			while (!pq.isEmpty() && start >= pq.peek().get(0)) {
 				maxProfit = Math.max(maxProfit, pq.peek().get(1));
 				pq.poll();
 			}

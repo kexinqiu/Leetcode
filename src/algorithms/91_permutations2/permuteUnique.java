@@ -18,6 +18,7 @@ class Solution {
 		}
 		//最外层的i是每一次排列的第一个数字，进入recursion后，i会逐个循环三个数
 		for (int i = 0; i < nums.length; i++) {
+			//avoid duplication
 			if(used[i] || i>0&&nums[i]==nums[i-1]&&!used[i-1]) continue;
 
 			path.add(nums[i]);
