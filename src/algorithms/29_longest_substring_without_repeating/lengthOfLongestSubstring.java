@@ -28,3 +28,36 @@ class Solution {
 		return max;
 	}
 }
+
+//2.
+class Solution {
+    public int lengthOfLongestSubstring(String s) {
+
+        int[] map = new int[128];
+
+        int start = 0;
+        int end = 0;
+        //check if the substring is valid
+        int counter = 0;
+        int maxLen = 0;
+
+        //expand right pointer
+        while(end<s.length()){
+            if(map[s.charAt(end)]>0) counter++;
+            map[s.charAt(end)]++;
+
+            //when the substring is not valid
+            while(counter>0) {
+				//如果>1，说明是重复的char，那么将其跳过后，substring又符合条件
+				if (map[s.charAt(start)] > 1) counter--;
+				map[s.charAt(start)]--;
+				start++;
+			}
+            maxLen = Math.max(maxLen, end-start+1);
+
+			//move ahead
+			end++;
+        }
+        return maxLen;
+    }
+}
