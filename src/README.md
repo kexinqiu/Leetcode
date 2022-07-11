@@ -25,8 +25,6 @@
 | 35  | binary search O(logn)  sorted array 是信号                           | [Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/)             | [Java](./algorithms/26_find_min_in_rotated_sorted_array/FindMin.java)                     | [medium](./algorithms/26_find_min_in_rotated_sorted_array/README.md) |
 | 38  | sliding window  / two pointers      O(n)                          | [Longest Substring Without Repeating](https://leetcode.com/problems/longest-substring-without-repeating-characters/)    | [Java](./algorithms/29_longest_substring_without_repeating/lengthOfLongestSubstring.java) | [medium]()                                                           |
 | 39  | sliding window  / two pointers      O(n)                          | [Longest Repeating Character Replacement](https://leetcode.com/problems/longest-repeating-character-replacement/)       | [Java](./algorithms/30_longest_repeating_replacement/characterReplacement.java)           | [medium]()                                                           |
-| 41  | DFS                                                               | [Number of Islands](https://leetcode.com/problems/number-of-islands/)                                                   | [Java](./algorithms/32_numbers_of_Islands/NumIsLand.java)                                 | [medium]()                                                           |
-| 42  | DFS                                                               | [417 Pacific Atlantic Water Flow](https://leetcode.com/problems/pacific-atlantic-water-flow/)                           | [Java](./algorithms/33_pacific_atlantic_water_flow/PacificAtlantic.java)                  | [medium]()                                                           |
 | 43  | bottom-up                                                         | [322 Coin Change](https://leetcode.com/problems/coin-change/)                                                           | [Java](./algorithms/36_coin_change/CoinChange.java)                                       | [medium](./algorithms/36_coin_change/README.md)                      |
 | 44  | bottom-up                                                         | [518 Coin Change2](https://leetcode.com/problems/coin-change-2/)                                                        | [Java](./algorithms/37_coin_change2/CoinChange.java)                                      | [medium](./algorithms/37_coin_change2/README.md)                     |
 | 45  | DP:bottom-up     sliding window       O(n^2)                      | [516 Longest Palindromic Subsequence](https://leetcode.com/problems/longest-palindromic-subsequence/)                   | [Java](./algorithms/38_longest_palindromic_subsequence/LongestPalindromeSubseq.java)      | [medium](./algorithms/38_longest_palindromic_subsequence/README.md)  |
@@ -87,6 +85,7 @@ Algorithms：
 | [matrix]      |                     |                                                                                                                  |                                                                               |            |
 | 12            |                     | [37 Sudoku Solver](https://leetcode.com/problems/sudoku-solver/)                                                 | [Java]()                                                                      | [hard]()   |
 | 13            |                     | [51 N-Queens](https://leetcode.com/problems/n-queens/)                                                           | [Java]()                                                                      | [hard]()   |
+| 14            |                     | [79 Word Search](https://leetcode.com/problems/word-search/)                                                     | [Java](./algorithms/124_word_search/wordSearch.java)                          | [medium]() |
 
 | DP  |        |
 
@@ -98,11 +97,12 @@ Algorithms：
 
 | Math  |        |
 
-| #   | Algorithms                         | Title                                                                      | Solution                                                 | Difficulty |
-|-----|------------------------------------|----------------------------------------------------------------------------|----------------------------------------------------------|------------|
-| 1   | hashset/slow fast pointers O(logn) | [202 Happy Number](https://leetcode.com/problems/happy-number/)            | [Java](./algorithms/105_happy_numbers/isHappy.java)      | [easy]()   |
-| 2   | O(1)                               | [13 Roman to Integer](https://leetcode.com/problems/roman-to-integer/)     | [Java](./algorithms/79_roman_to_integer/romanToInt.java) | [easy]()   |
-| 3   | O(1)                               | [12 Integer to Roman](https://leetcode.com/problems/integer-to-roman/)     | [Java](./algorithms/80_integer_to_roman/intToRoman.java) | [medium]() |
+| #   | Algorithms                         | Title                                                                    | Solution                                                 | Difficulty  |
+|-----|------------------------------------|--------------------------------------------------------------------------|----------------------------------------------------------|-------------|
+| 1   | hashset/slow fast pointers O(logn) | [202 Happy Number](https://leetcode.com/problems/happy-number/)          | [Java](./algorithms/105_happy_numbers/isHappy.java)      | [easy]()    |
+| 2   | O(1)                               | [13 Roman to Integer](https://leetcode.com/problems/roman-to-integer/)   | [Java](./algorithms/79_roman_to_integer/romanToInt.java) | [easy]()    |
+| 3   | O(1)                               | [12 Integer to Roman](https://leetcode.com/problems/integer-to-roman/)   | [Java](./algorithms/80_integer_to_roman/intToRoman.java) | [medium]()  |
+| 1   | O(log n)                           | [7 Reverse Integer](https://leetcode.com/problems/reverse-integer/)      | [Java](./algorithms/81_reverse_integer/reverse.java)     | [medium]()  |
 
 
 | Greedy |        |
@@ -272,6 +272,7 @@ Data Structure:
 | 9             | recursion DFS / iteration BFS     O(n)                                                | [102 Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/)                                                   | [Java](./algorithms/57_BT_level_order_traversal/levelOrder.java)             | [medium]()                                                          |
 | 10            | recursion DFS / iteration BFS     O(n+m)                                              | [572 Subtree of Another Tree](https://leetcode.com/problems/subtree-of-another-tree/)                                                                       | [Java](./algorithms/58_subtree_of_tree/isSubtree.java)                       | [medium]()                                                          |
 | 11            | recursion   / iteration       O(n)                                                    | [235 Lowest Common Ancestor of a Binary Search Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/)                         | [Java](./algorithms/59_lowest_common_ancester_BST/lowestCommonAncestor.java) | [easy]()                                                            |
+| 11            | DFS recursion   / BFS       O(n)                                                      | [690 Employee Importance](https://leetcode.com/problems/employee-importance/)                                                                               | [Java](./algorithms/123_employee_importace/getImportance.java)               | [medium]()                                                          |
 | 12            | recursion DFS inorder(ascending order-smallest problem)/ iteration  DFS inorder  O(n) | [230 Kth Smallest Element in a BST](https://leetcode.com/problems/kth-smallest-element-in-a-bst/solution/)                                                  | [Java](./algorithms/42_kth_smallest_in_BST/KthSmallest.java)                 | [medium](./algorithms/42_kth_smallest_in_BST/README.md)             |
 | 13            | BFS                                                                                   | [314 Binary Tree Vertical Order Traversal](https://leetcode.com/problems/binary-tree-vertical-order-traversal/)                                             | [Java](./algorithms/60_BT_vertical_traversal/verticalOrder.java)             | [medium]()                                                          |
 | 14            | DFS preorder recursion/iteration   O(n)                                               | [938 Range Sum of BST](https://leetcode.com/problems/range-sum-of-bst/)                                                                                     | [Java](./algorithms/61_BST_range_sum/rangeSumBST.java)                       | [easy]()                                                            |
@@ -280,7 +281,7 @@ Data Structure:
 | 17            | recursion DFS    O(n)                                                                 | [366 Find Leaves of Binary Tree](https://leetcode.com/problems/find-leaves-of-binary-tree/)                                                                 | [Java](./algorithms/64_find_leaves_BT/findLeaves.java)                       | [medium]()                                                          |
 | 18            | recursion DFS / iteration BFS    O(n)        ->102                                    | [199 Binary Tree Right Side View](https://leetcode.com/problems/binary-tree-right-side-view/)                                                               | [Java](./algorithms/65_BT_right_side_view/rightSideView.java)                | [medium]()                                                          |
 | 19            | 1.DFS+hashmap recursion -> undirected graph 2.BFS    O(n)                             | [863 All Nodes Distance K in Binary Tree](hhttps://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)                                              | [Java](./algorithms/66_nodes_distanceK_BT/distanceK.java)                    | [medium]()                                                          |
-| [Linked List] | [sort Doubly Linked List]                                                             |                                                                                                      |                                                                              |                                                                     |
+| [Linked List] | [sort Doubly Linked List]                                                             |                                                                                                                                                             |                                                                              |                                                                     |
 | 20            | dfs inorder recursion /dfs inorder iteration     O(n)                                 | [426 Convert Binary Search Tree to Sorted Doubly Linked List](https://leetcode.com/problems/convert-binary-search-tree-to-sorted-doubly-linked-list/)       | [Java](./algorithms/67_convert_BST_to_DLL/treeToDoublyList.java)             | [medium]()                                                          |
 
 |Heap      | Heap Sort
@@ -295,12 +296,18 @@ Data Structure:
        index*2+1     index*2+2
 
 
-| Math |         |
 
-| #   | Algorithms | Title                                                                  | Solution                                             | Difficulty   |
-|-----|------------|------------------------------------------------------------------------|------------------------------------------------------|--------------|
-| 1   | O(log n)   | [7 Reverse Integer](https://leetcode.com/problems/reverse-integer/)    | [Java](./algorithms/81_reverse_integer/reverse.java) | [medium]()   |
 
+| Graph |         |
+
+| #   | Algorithms       | Title                                                                                         | Solution                                                                 | Difficulty   |
+|-----|------------------|-----------------------------------------------------------------------------------------------|--------------------------------------------------------------------------|--------------|
+| 1   | O(log n)         | [7 Reverse Integer](https://leetcode.com/problems/reverse-integer/)                           | [Java](./algorithms/81_reverse_integer/reverse.java)                     | [medium]()   |
+|     | [2D Grid]        |                                                                                               |                                                                          |              |
+| 2   | backtracking+dfs | [79 Word Search](https://leetcode.com/problems/word-search/)                                  | [Java](./algorithms/124_word_search/wordSearch.java)                     | [medium]()   |
+|     | [岛屿问题]           |                                                                                               |                                                                          |              |
+| 41  | DFS              | [200 Number of Islands](https://leetcode.com/problems/number-of-islands/)                     | [Java](./algorithms/32_numbers_of_Islands/NumIsLand.java)                | [medium]()   |
+| 42  | DFS              | [417 Pacific Atlantic Water Flow](https://leetcode.com/problems/pacific-atlantic-water-flow/) | [Java](./algorithms/33_pacific_atlantic_water_flow/PacificAtlantic.java) | [medium]()   |
 
 
 

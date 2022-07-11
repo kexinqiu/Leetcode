@@ -51,6 +51,25 @@ Postorder:
 		root.right = left;
 		return root;
 	}
+preorder：
+//leetcode 144
+
+    public List<Integer> preorderTraversal(TreeNode root) {
+		List<Integer> res = new ArrayList<>();
+		if(root==null) return res;
+		helper(root, res);
+		return res;
+	}
+	private void helper(TreeNode node, List<Integer> res){
+		if(node==null) return;
+		//operation
+		res.add(node.val);
+		// recursion on left
+		helper(node.left, res);
+		// recursion on left
+		helper(node.right, res);
+	}
+
 
 
 DFS iteration:
@@ -65,11 +84,14 @@ public List<Integer> inorderTraversal(TreeNode root) {
         while(!stack.isEmpty()||curr!=null){
             while(curr!=null){
                 stack.push(curr);
+				//traverse on left
                 curr=curr.left;
             }
             curr=stack.pop();
+
             //operation
             res.add(curr.val);
+
 			//traverse on right
             curr=curr.right;
         }

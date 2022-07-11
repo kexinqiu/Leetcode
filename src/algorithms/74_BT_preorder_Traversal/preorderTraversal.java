@@ -40,6 +40,7 @@ class Solution {
 		Stack<TreeNode> stack = new Stack<>();
 
 		TreeNode node = root;
+
 		while(!stack.isEmpty()||node!=null){
 			while(node!=null){
 				//preorder

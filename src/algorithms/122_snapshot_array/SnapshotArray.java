@@ -1,5 +1,6 @@
-//The idea is, the whole array can be large,
-//and we may take the snap tons of times.(Like you may always ctrl + S twice)
+//由于快照功能 snap() 的调用次数可能很多，所以我们如果采用每次快照都整体保存一次数组的方法，
+// 无论在时间复杂度还是空间复杂度上，都是行不通的。那么更优化的方法是，只保存每次快照变化的部分。
+
 
 //Instead of record the history of the whole array,
 //we will record the history of each cell.
