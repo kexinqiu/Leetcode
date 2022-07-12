@@ -300,14 +300,18 @@ Data Structure:
 
 | Graph |         |
 
-| #   | Algorithms       | Title                                                                                         | Solution                                                                 | Difficulty   |
-|-----|------------------|-----------------------------------------------------------------------------------------------|--------------------------------------------------------------------------|--------------|
-| 1   | O(log n)         | [7 Reverse Integer](https://leetcode.com/problems/reverse-integer/)                           | [Java](./algorithms/81_reverse_integer/reverse.java)                     | [medium]()   |
-|     | [2D Grid]        |                                                                                               |                                                                          |              |
-| 2   | backtracking+dfs | [79 Word Search](https://leetcode.com/problems/word-search/)                                  | [Java](./algorithms/124_word_search/wordSearch.java)                     | [medium]()   |
-|     | [岛屿问题]           |                                                                                               |                                                                          |              |
-| 41  | DFS              | [200 Number of Islands](https://leetcode.com/problems/number-of-islands/)                     | [Java](./algorithms/32_numbers_of_Islands/NumIsLand.java)                | [medium]()   |
-| 42  | DFS              | [417 Pacific Atlantic Water Flow](https://leetcode.com/problems/pacific-atlantic-water-flow/) | [Java](./algorithms/33_pacific_atlantic_water_flow/PacificAtlantic.java) | [medium]()   |
+| #   | Algorithms       | Title                                                                                         | Solution                                                                 | Difficulty |
+|-----|------------------|-----------------------------------------------------------------------------------------------|--------------------------------------------------------------------------|------------|
+| 1   | O(log n)         | [7 Reverse Integer](https://leetcode.com/problems/reverse-integer/)                           | [Java](./algorithms/81_reverse_integer/reverse.java)                     | [medium]() |
+|     | [2D Grid]        |                                                                                               |                                                                          |            |
+| 2   | backtracking+dfs | [79 Word Search](https://leetcode.com/problems/word-search/)                                  | [Java](./algorithms/124_word_search/wordSearch.java)                     | [medium]() |
+|     | [岛屿问题]           |                                                                                               |                                                                          |            |
+| 41  | DFS              | [200 Number of Islands](https://leetcode.com/problems/number-of-islands/)                     | [Java](./algorithms/32_numbers_of_Islands/NumIsLand.java)                | [medium]() |
+| 42  | DFS              | [463 Island Perimeter](https://leetcode.com/problems/island-perimeter/)                       | [Java](./algorithms/125_island_perimeter/islandPerimeter.java)           | [easy]()   |
+| 43  | DFS              | [695 Max Area of Island](https://leetcode.com/problems/max-area-of-island/)                   | [Java](./algorithms/126_max_area__islan/maxAreaOfIsland.java)            | [medium]() |
+| 44  | DFS              | [130 Surrounded Regions](https://leetcode.com/problems/surrounded-regions/)                   | [Java](./algorithms/127_surrounded_egions/solve.java)                    | [medium]() |
+| 45  | DFS              | [417 Pacific Atlantic Water Flow](https://leetcode.com/problems/pacific-atlantic-water-flow/) | [Java](./algorithms/33_pacific_atlantic_water_flow/PacificAtlantic.java) | [medium]() |
+| 46  | DFS   / bfs      | [286 Walls and Gates](https://leetcode.com/problems/walls-and-gates/)                         | [Java](./algorithms/128_walls_and_gates/wallsAndGates.java)              | [medium]() |
 
 
 
