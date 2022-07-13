@@ -1,22 +1,15 @@
-//dfs - topologic sort
-
-//tc: o(E+V) V represents the number of vertices and E represents the number of edges. We pop each node exactly once from the zero in-degree queue and that gives us V. Also, for each vertex, we iterate over its adjacency list and in totality, we iterate over all the edges in the graph which gives us E.
-
-//SC :o(E+V)
-//In the worst case, there won't be any prerequisite relationship and the queue will contain all the vertices
-//we also use the adjacency list to represent our graph initially. The space occupied is defined by the number of edges because for each node as the key, we have all its adjacent nodes in the form of a list as the value.
+//怎么判断能否修完所有课？
+//BFS 结束时，如果仍有课的入度不为 0，无法被选，完成不了所有课。否则，能找到一种顺序把所有课上完。
+//或者：用一个变量 count 记录入列的顶点个数，最后判断 count 是否等于总课程数。
 
 class Solution {
-	public int[] findOrder(int numCourses, int[][] prerequisites) {
+	public boolean canFinish(int numCourses, int[][] prerequisites) {
 		//1. initilize all array we need
-		//result order array
-		int[] courseOrder = new int[numCourses];
-		//in-degree array
 		int[] inDegree = new int[numCourses];
-		//adjacency array
 		Map<Integer, List<Integer>> adj = new HashMap<>();
 
 		//2. Create the adjacency list representation of the graph
+
 		for(int i=0;i<prerequisites.length;i++){
 			int dest = prerequisites[i][0];
 			int src = prerequisites[i][1];
@@ -40,7 +33,6 @@ class Solution {
 		while(!queue.isEmpty()){
 			int course = queue.poll();
 			//store into the result array
-			courseOrder[i] = course;
 			i++;
 			//get the adjacency of the course
 			if(adj.containsKey(course)){
@@ -52,9 +44,8 @@ class Solution {
 				}
 			}
 		}
-		// Check to see if topological sort is possible or not.
-		if(i==numCourses) return courseOrder;
 
-		return new int[0];
+
+		return i==numCourses;
 	}
 }
