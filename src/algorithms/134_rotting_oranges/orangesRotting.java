@@ -28,7 +28,9 @@ class Solution {
 
 		while(count>0 && !queue.isEmpty()){
 			round++;
-			for(int n=queue.size();n>0;n--){
+			int size =queue.size();
+			//同时加入queue的 是在同一个round上，如果不用size做循环，那么round会变多
+			for(int n=size;n>0;n--){
 				int[] orange = queue.poll();
 
 				for(int[] d : directions){
@@ -38,7 +40,6 @@ class Solution {
 					if(newI>=0 && newI<grid.length &&
 						newJ>=0 && newJ<grid[0].length &&
 						grid[newI][newJ]==1){
-
 						queue.offer(new int[]{newI, newJ});
 						count--;
 						grid[newI][newJ]=2;
