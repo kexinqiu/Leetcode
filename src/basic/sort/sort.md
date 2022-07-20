@@ -1,6 +1,7 @@
 //list
 Collections.sort(list, Comparator.comparingInt(a -> a.get(0)));
 
+
 //array
 Arrays.sort(array, (a1, a2)-> Integer.compare(a1[0], a2[0]);
 
