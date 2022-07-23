@@ -1,3 +1,63 @@
+class Solution {
+	public String reverseWords(String s) {
+		String newS = removeSpace(s);
+
+		char[] c = newS.toCharArray();
+
+		reverse(c, 0, newS.length()-1);
+
+		//reverse 在string 中的word
+		int l = 0;
+		int r = newS.length()-1;
+
+		while(l<=r){
+			if(c[l]!=' '){
+				int j = l;
+				while(j<=r && c[j]!=' ') j++;
+				reverse(c, l, j-1);
+				l = j-1;
+			}
+			l++;
+		}
+		return new String(c);
+	}
+
+	public String removeSpace(String s){
+
+		int l = 0;
+		int r = s.length()-1;
+
+		StringBuilder sb = new StringBuilder();
+
+		while(l<=r && s.charAt(l)==' ') l++;
+		while(l<=r && s.charAt(r)==' ') r--;
+
+		while(l<=r){
+			if(s.charAt(l)!=' ') sb.append(s.charAt(l));
+			else if(sb.charAt(sb.length()-1)!=' ') sb.append(s.charAt(l));
+
+			l++;
+		}
+		return sb.toString();
+	}
+
+	public void reverse(char[] c, int i, int j){
+
+		while(i<j){
+			char tmp = c[i];
+			c[i] = c[j];
+			c[j] = tmp;
+
+			i++;
+			j--;
+		}
+	}
+}
+
+
+
+
+
 //1.先去除首位空格 -> reverse whole string -> reverse each worde
 //tc:o(n)
 //sc:o(n)
@@ -13,7 +73,7 @@ class Solution {
 		return sb.toString();
 	}
 
-	//去除首位空格
+	//去除首尾及多余空格
 	public StringBuilder trimSpace(String s){
 		int l = 0;
 		int r = s.length()-1;

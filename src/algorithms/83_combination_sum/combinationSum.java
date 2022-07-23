@@ -64,6 +64,39 @@ class Solution {
 	public List<List<Integer>> combinationSum(int[] candidates, int target) {
 		List<List<Integer>> res = new ArrayList<>();
 		//sort the array
+		//从小的开始遍历
+		Arrays.sort(candidates);
+		backtrack(res, new ArrayList<>(), candidates, target, 0);
+		return res;
+	}
+}
+
+//think about this problem as a dfs problem. Go deep untill there is no more element and
+//move to next branch
+class Solution {
+	private void backtrack(List<List<Integer>> res, List<Integer> comb, int[] candidates, int remain, int start){
+
+		if(remain==0) {
+			// make a deep copy of the current combination
+			res.add(new ArrayList<>(comb));
+			return;
+		}
+
+
+		for(int i=start;i<candidates.length;i++){
+			if(remain-candidates[i]<0) break;
+			// add the number into the combination
+			comb.add(candidates[i]);
+			// not i + 1 because we can reuse same elements
+			backtrack(res, comb, candidates, remain-candidates[i], i);
+			// backtrack, remove the last number from the combination
+			comb.remove(comb.size()-1);
+		}
+	}
+
+	public List<List<Integer>> combinationSum(int[] candidates, int target) {
+		List<List<Integer>> res = new ArrayList<>();
+		//sort the array
 		Arrays.sort(candidates);
 		backtrack(res, new ArrayList<>(), candidates, target, 0);
 		return res;
