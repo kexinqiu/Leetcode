@@ -1,3 +1,6 @@
+//tc:o(logn)
+//sc:o(1)
+
 class Solution {
 	public int[] searchRange(int[] nums, int target) {
 		int[] tmp = new int[2];
@@ -14,12 +17,13 @@ class Solution {
 
 		while(l<=r){
 			int mid = l+(r-l)/2;
+			if(nums[mid]==target){
+				index = mid;
+				r = mid-1;// lets see if there one more on the left
+			}
 
-			if(nums[mid]==target) index=mid;
-			//mid has been checked, so mid+1 or mid-1
-			else if (nums[mid]>target) r=mid-1;
+			else if(nums[mid]>target) r=mid-1;
 			else l=mid+1;
-
 		}
 
 		return index;
@@ -32,12 +36,15 @@ class Solution {
 		int r = nums.length-1;
 
 		while (l<=r){
-			//overflow
 			int mid = l + (r-l)/2;
-			if(nums[mid]==target) index=mid;
+			if(nums[mid]==target){
+				index = mid;
+				l = mid+1;// lets see if there one more on the right
+			}
 			else if(nums[mid]<target) l=mid+1;
 			else r=mid-1;
 
+			if(nums[mid]==target) index=mid;
 		}
 
 		return index;
