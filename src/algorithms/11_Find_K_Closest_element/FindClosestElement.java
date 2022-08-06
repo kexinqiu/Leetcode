@@ -1,5 +1,8 @@
 import java.util.ArrayList;
 //binary search to find the left bound
+//TC: O(log(N-k)+k)
+//sc: o(1)
+
 class Solution {
 	public List<Integer> findClosestElements(int[] arr, int k, int x) {
 		// Initialize binary search bounds

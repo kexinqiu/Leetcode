@@ -39,18 +39,23 @@ Inorder:
 Postorder:
 	//leetcode 226:
 	public TreeNode invertTree(TreeNode root) {
-		if (root == null) {
-			return null;
-		}
-		//recursion on left
-		TreeNode left = invertTree(root.left);
-		//recursion on right
-		TreeNode right = invertTree(root.right);
-		//operation
-		root.left = right;
-		root.right = left;
-		return root;
+		if(root==null) return null;
+		TreeNode node = helper(root);
+		return node;
 	}
+
+    public TreeNode helper(TreeNode root){
+        if(root==null) return root;
+        
+        TreeNode left = invertTree(root.left);
+        TreeNode right = invertTree(root.right);
+        
+        root.left = right;
+        root.right = left;
+        
+        return root; 
+    }
+
 preorder：
 //leetcode 144
 
@@ -98,6 +103,25 @@ public List<Integer> inorderTraversal(TreeNode root) {
         return res;
     }
 
+preorder
+
+public List<Integer> preorderTraversal(TreeNode root) {
+		List<Integer> res = new ArrayList<>();
+		if(root==null) return res;
+		Stack<TreeNode> stack = new Stack<>();
+
+        stack.add(root);
+        
+        while(!stack.isEmpty()){
+            TreeNode node = stack.pop();
+            res.add(node.val);
+            //先进后出，右先进，左后进！！
+
+            if(node.right!=null) stack.add(node.right);
+            if(node.left!=null) stack.add(node.left);
+        }
+        return res;
+    }
 
 
 BFS iteration:
