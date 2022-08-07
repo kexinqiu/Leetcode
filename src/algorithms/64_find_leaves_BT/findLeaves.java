@@ -1,9 +1,10 @@
 //recursion DFS
-//tc:O(n)
-//sc:O(n)
+//tc: o(N) N for traverse, N for add nodes to list
+//sc:o(N)  for recursion and list
 
 //place all the values in their respective positions by sorting them based on their heights
 //placing each element (val) to its correct index in the solution array
+//需要一个height变量来判断是否在同一level
 class Solution {
 	public List<List<Integer>> findLeaves(TreeNode root) {
 		List<List<Integer>> res = new ArrayList<>();
