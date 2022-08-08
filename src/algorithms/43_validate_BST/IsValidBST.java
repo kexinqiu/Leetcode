@@ -1,4 +1,6 @@
 import javax.swing.tree.TreeNode;
+//inorder ：将当前node和上一个node相比，确保比上一个node大
+
 
 class Solution {
 	public boolean isValidBST(TreeNode root) {
