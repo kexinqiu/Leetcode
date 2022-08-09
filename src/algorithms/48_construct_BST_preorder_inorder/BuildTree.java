@@ -13,23 +13,23 @@ class Solution {
 			map.put(inorder[i], i);
 		}
 
-		return helper(preorder, inorder, 0, 0, inorder.length-1, map);
+		return helper(preorder, inorder, 0, preorder.length-1, 0, inorder.length-1, map);
 
 	}
 	//preStart is the root of subtree in preorder
 	//intStart is the start index of subtree in inorder, intEnd is the end index of subtree in inorder
-	private TreeNode helper(int[] preorder, int[] inorder, int preStart, int inStart, int inEnd,  HashMap<Integer, Integer> map){
+	private TreeNode helper(int[] preorder, int[] inorder, int preStart, int preEnd, int inStart, int inEnd, HashMap<Integer, Integer> map){
 		//when the recursion will stop
-		if(preStart>preorder.length-1 || inStart>inEnd ) return null;
+		if(preStart>preEnd || inStart>inEnd ) return null;
 		//get the root node
 		TreeNode root = new TreeNode(preorder[preStart]);
 		//get the index of root in inorder
 		int rootIndex = map.get(preorder[preStart]);
 
-		root.left = helper(preorder, inorder, preStart+1, inStart, rootIndex-1, map);
+		root.left = helper(preorder, inorder, preStart+1, preStart+rootIndex+1, inStart, rootIndex-1, map);
 		//the root node of right side is the index skiping all the nodes on left side
 		//it should be the number of nodes on left is (rootIndex-intStart)
-		root.right = helper(preorder, inorder, preStart+rootIndex-inStart+1, rootIndex+1, inEnd, map);
+		root.right = helper(preorder, inorder, preStart+rootIndex-inStart+1, preEnd, rootIndex+1, inEnd, map);
 
 		return root;
 
