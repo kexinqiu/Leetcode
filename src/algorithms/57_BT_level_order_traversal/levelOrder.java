@@ -3,8 +3,8 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 
-TC:O(n)
-SC:O(n)
+//TC:O(n)
+//SC:O(n)
 
 //iteration BSF
 class Solution {
@@ -55,19 +55,15 @@ class Solution {
 	private void levelHelper(List<List<Integer>> res, TreeNode root, int level){
 		//base case
 		if(root==null) return;
-
-		int size = res.size();
 		//start the current level
 		////for same level, the operation will be executed only once
-		if(level==size){
+		if(level==res.size()){
 			res.add(new LinkedList<>());
 		}
 		//fulfil the current level
 		res.get(level).add(root.val);
 		//recursion
-		if(root.left!=null)
 		levelHelper(res, root.left, level+1);
-		if(root.right!=null)
 		levelHelper(res, root.right, level+1);
 	}
 }

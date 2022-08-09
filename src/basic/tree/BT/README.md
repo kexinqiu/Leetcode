@@ -58,7 +58,6 @@ Postorder:
 
 preorder：
 //leetcode 144
-
     public List<Integer> preorderTraversal(TreeNode root) {
 		List<Integer> res = new ArrayList<>();
 		if(root==null) return res;
@@ -79,6 +78,7 @@ preorder：
 
 DFS iteration:
 Inorder:
+*访问顺序和处理顺序不一致
 public List<Integer> inorderTraversal(TreeNode root) {
 		List<Integer> res = new ArrayList<>();
 		if(root==null) return res;
@@ -87,12 +87,12 @@ public List<Integer> inorderTraversal(TreeNode root) {
         TreeNode curr = root;
         
         while(!stack.isEmpty()||curr!=null){
-            while(curr!=null){
-                stack.push(curr);
+            while(curr!=null){//指针来访问节点，访问到最底层
+                stack.push(curr);//将访问的节点放进栈
 				//traverse on left
                 curr=curr.left;
             }
-            curr=stack.pop();
+            curr=stack.pop(); // 从栈里弹出的数据，就是要处理的数据
 
             //operation
             res.add(curr.val);
@@ -104,7 +104,7 @@ public List<Integer> inorderTraversal(TreeNode root) {
     }
 
 preorder
-
+*需要注意入栈顺序为 先右后左
 public List<Integer> preorderTraversal(TreeNode root) {
 		List<Integer> res = new ArrayList<>();
 		if(root==null) return res;
@@ -114,6 +114,7 @@ public List<Integer> preorderTraversal(TreeNode root) {
         
         while(!stack.isEmpty()){
             TreeNode node = stack.pop();
+			//operation
             res.add(node.val);
             //先进后出，右先进，左后进！！
 
@@ -122,6 +123,28 @@ public List<Integer> preorderTraversal(TreeNode root) {
         }
         return res;
     }
+
+postorder
+public List<Integer> postorderTraversal(TreeNode root) {
+	LinkedList<Integer> ans = new LinkedList<>();
+	Stack<TreeNode> stack = new Stack<>();
+	if (root == null) return ans;
+	stack.push(root);
+
+	while (!stack.isEmpty()) {
+		TreeNode cur = stack.pop();
+        //逆序放置
+		ans.addFirst(cur.val);
+		if (cur.left != null) {
+			stack.push(cur.left);
+		}
+		if (cur.right != null) {
+			stack.push(cur.right);
+		} 
+	}
+
+	return ans;
+}
 
 
 BFS iteration:
