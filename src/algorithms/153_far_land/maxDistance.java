@@ -1,5 +1,5 @@
 //tc: o(m*n)
-//sc: o(min(m, n))
+//sc: o(m*n)
 //bfs
 class Solution {
 	public int maxDistance(int[][] grid) {
