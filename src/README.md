@@ -100,7 +100,7 @@ l<=r l=mid+1 & r=mid-1
 | 12            |                             | [37 Sudoku Solver](https://leetcode.com/problems/sudoku-solver/)                                                 | [Java]()                                                                        | [hard]()   |
 | 13            |                             | [51 N-Queens](https://leetcode.com/problems/n-queens/)                                                           | [Java]()                                                                        | [hard]()   |
 | 14            |                             | [79 Word Search](https://leetcode.com/problems/word-search/)                                                     | [Java](./algorithms/124_word_search/wordSearch.java)                            | [medium]() |
-| 14            |                             | [79 Word Search](https://leetcode.com/problems/word-search/)                                                     | [Java](./algorithms/124_word_search/wordSearch.java)                            | [medium]() |
+| 14            |                             | [212 Word Search II](https://leetcode.com/problems/word-search-ii/)                                              | [Java](./algorithms/162_word_search2/findWords.java)                            | [hard]()   |
 
 | DP  |        |
 
