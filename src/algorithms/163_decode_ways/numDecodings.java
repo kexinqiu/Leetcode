@@ -9,14 +9,14 @@
 //第二种情况，i和i-1共同组成item，dp[i]由i-2转移过来，f[i]=f[i−2]
 // dp[i] = dp[i-1] && dp[i]=dp[i-2]
 
-
+//tc:o(n)
+//sc:o(n)
 class Solution {
 	public int numDecodings(String s) {
 		int n = s.length();
 		int[] dp = new int[n+1];
 		dp[0] = 1;
 		s = " " + s;
-		//1-n 0-(n-1)
 		for(int i=1;i<=n;i++){
 			if(s.charAt(i)!='0'){
 				dp[i] += dp[i-1];
