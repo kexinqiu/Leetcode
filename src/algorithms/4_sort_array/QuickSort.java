@@ -22,7 +22,7 @@ class Solution {
 				swap(nums, i, j);
 			}
 		}
-		swap(arr, i+1, end);
+		swap(nums, i+1, end);
 		return i+1;
 	}
 
