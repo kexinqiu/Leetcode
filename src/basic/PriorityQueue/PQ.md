@@ -1,4 +1,5 @@
 //Pair / List
+从小到大
 Queue<Pair<>> pq = new PriorityQueue<Pair<>>(Comparator.comparing(p->p.getKey())
 
 //map
@@ -9,6 +10,7 @@ PriorityQueue<Map.Entry<String, Integer>> pq = new PriorityQueue<>(
 
 
 //array
+//从小到大
 Queue<String> pq = new PriorityQueue<String>(new Comparator<String>(){
 			@Override
 			public int comapre(String s1, String s2){
