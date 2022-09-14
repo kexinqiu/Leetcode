@@ -122,10 +122,11 @@ l<=r l=mid+1 & r=mid-1
 
 | Greedy |        |
 
-| #   | Algorithms                           | Title                                                                      | Solution                                                    | Difficulty  |
-|-----|--------------------------------------|----------------------------------------------------------------------------|-------------------------------------------------------------|-------------|
-| 1   | Arrays.sort() O(nlogn)               | [252 Meeting room](https://leetcode.com/problems/meeting-rooms/)           | [Java](./algorithms/46_meeting_room/CanAttendMeetings.java) | [medium]()  |
-| 2   | PriorityQueue Arrays.sort() O(nlogn) | [253 Meeting room2](https://leetcode.com/problems/meeting-rooms-ii/)       | [Java](./algorithms/47_meeting_room2/MinMeetingRooms.java)  | [medium]()  |
+| #   | Algorithms                           | Title                                                                     | Solution                                                    | Difficulty  |
+|-----|--------------------------------------|---------------------------------------------------------------------------|-------------------------------------------------------------|-------------|
+| 1   | Arrays.sort() O(nlogn)               | [252 Meeting room](https://leetcode.com/problems/meeting-rooms/)          | [Java](./algorithms/46_meeting_room/CanAttendMeetings.java) | [medium]()  |
+| 2   | PriorityQueue Arrays.sort() O(nlogn) | [253 Meeting room2](https://leetcode.com/problems/meeting-rooms-ii/)      | [Java](./algorithms/47_meeting_room2/MinMeetingRooms.java)  | [medium]()  |
+| 2   | O(n)                                 | [621 Task Scheduler](https://leetcode.com/problems/task-scheduler/)       | [Java]()                                                    | [medium]()  |
 
 
 Data Structure:
