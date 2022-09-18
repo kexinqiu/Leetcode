@@ -1,5 +1,5 @@
 1.quick_sort:
-O(nlogn)
+O(n^2)
 first partition, choose a dividing point, and the move all the data less than the point into left side and
 the data larger than the point into right side.
 and then perform recursion on both sides.
