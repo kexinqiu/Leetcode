@@ -23,7 +23,7 @@ class Solution {
 		//check for invalid index and for sites aren't lands, it is the point to exit the recursion
 		if(i<0 || i>=grid.length || j<0 || j>=grid[i].length || grid[i][j]=='0') return;
 		//mark the land as water
-		grid[i][j]='2';
+		grid[i][j]='0';
 
 		// Check all adjacent sites
 		//depth first
@@ -67,7 +67,7 @@ class Solution {
 
 //bfs
 //tc: o(mn)
-//sc : o(min(m,n)) because in worst case where the grid is filled with lands,
+//sc : o(min(m,n)) because in worst case where the grid is filled with lands, 此时queue里的element最多也是o(min(m,n))
 // the size of queue can grow up to min(M,N)
 class Solution {
 	public int numIslands(char[][] grid) {

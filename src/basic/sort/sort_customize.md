@@ -17,3 +17,16 @@ class MyCompare implements Comparator<int[]>{
 		return int1[2]-int2[2];
 	}
 }
+
+
+
+Collections.sort(list, new Comparator<Integer>() {
+	@Override
+	public int compare(Integer a, Integer b) {
+		if (bits[a] != bits[b]) {
+		return bits[a] - bits[b];
+		} else {
+		return a - b;
+		}
+	}
+});

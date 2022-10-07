@@ -2,6 +2,8 @@ package basic.graph;
 //template
 
 
+import javafx.util.Pair;
+
 //1.bfs
 class Solution {
 
@@ -36,6 +38,33 @@ class Solution {
 class Solution {
 	// Adjacency list
 	Map<Integer, List<Pair<Integer, Integer>>> adj = new HashMap<>();
+
+	public int networkDelayTime(int[][] times, int n, int k) {
+		// Build the adjacency list
+		for (int[] time : times) {
+			int source = time[0];
+			int dest = time[1];
+			int travelTime = time[2];
+
+			List tmp = adj.getOrDefault(src, new ArrayList<>());
+			tmp.add(new Pair(signalTime, des));
+			adj.put(src, tmp);
+		}
+
+		int[] signalReceivedAt = new int[n + 1];
+		Arrays.fill(signalReceivedAt, Integer.MAX_VALUE);
+
+		dijkstra(signalReceivedAt, k, n);
+
+		int answer = Integer.MIN_VALUE;
+		//注意要从1开始，因为0不存在
+		for (int i = 1; i <= n; i++) {
+			answer = Math.max(answer, signalReceivedAt[i]);
+		}
+
+		// INT_MAX signifies atleat one node is unreachable
+		return answer == Integer.MAX_VALUE ? -1 : answer;
+	}
 
 	private void dijkstra(int[] signalReceivedAt, int source, int n) {
 		//局部最优，每次选time更少的
@@ -74,33 +103,6 @@ class Solution {
 				}
 			}
 		}
-	}
-
-	public int networkDelayTime(int[][] times, int n, int k) {
-		// Build the adjacency list
-		for (int[] time : times) {
-			int source = time[0];
-			int dest = time[1];
-			int travelTime = time[2];
-
-			List tmp = adj.getOrDefault(src, new ArrayList<>());
-			tmp.add(new Pair(signalTime, des));
-			adj.put(src, tmp);
-		}
-
-		int[] signalReceivedAt = new int[n + 1];
-		Arrays.fill(signalReceivedAt, Integer.MAX_VALUE);
-
-		dijkstra(signalReceivedAt, k, n);
-
-		int answer = Integer.MIN_VALUE;
-		//注意要从1开始，因为0不存在
-		for (int i = 1; i <= n; i++) {
-			answer = Math.max(answer, signalReceivedAt[i]);
-		}
-
-		// INT_MAX signifies atleat one node is unreachable
-		return answer == Integer.MAX_VALUE ? -1 : answer;
 	}
 }
 
