@@ -108,6 +108,9 @@ l<=r l=mid+1 & r=mid-1
 | 1   | two pointers O(n)   / dp | [392 Is Subsequence](https://leetcode.com/problems/is-subsequence/)                                                                        | [Java](./algorithms/120_is_subsequence/isSubsequence.java)             | [easy]()   |
 | 1   |                          | [2369 Check if There is a Valid Partition For The Array](https://leetcode.com/problems/check-if-there-is-a-valid-partition-for-the-array/) | [Java](./algorithms/150_valid_partition_for_array/validPartition.java) | [medium]() |
 | 1   |                          | [91 Decode Ways](https://leetcode.com/problems/decode-ways/)                                                                               | [Java](./algorithms/163_decode_ways/numDecodings.java)                 | [medium]() |
+|     | [string - Subsequence]   |                                                                                                                                            |                                                                        |            |
+| 1   |                          | [115 Distinct Subsequences](https://leetcode.com/problems/distinct-subsequences/)                                                          | [Java]()                                                               | [hard]()   |
+| 1   |                          | [516. Longest Palindromic Subsequence](https://leetcode.com/problems/longest-palindromic-subsequence/)                                     | [Java]()                                                               | [hard]()   |
 
 
 | Math  |        |
