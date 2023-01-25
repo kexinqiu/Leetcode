@@ -71,7 +71,29 @@ l<=r l=mid+1 & r=mid-1
 | 5            | PriorityQueue:  O(nlogk) k is the number of linked list; n is number of nodes in two lists            | [23 Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/)                       | [Java](./algorithms/75_merge_k_sorted_list/mergeKLists.java)            | [hard]()                                                      |
 
 
+#Recursion
+| Memorization |  DFS(recursion)   | 如果递归问题产生重复的子问题，那么可以使用cache记住子问题的答案，避免重复计算
+|遇到重复计算
+
+| #   | Algorithms | Title                                                                   | Solution                                                  | Difficulty  |
+|-----|------------|-------------------------------------------------------------------------|-----------------------------------------------------------|-------------|
+| #   | 总结         |                                                                         | [Java](./basic/recursion/Memorization.java)               |             |
+| 1   |            | [509 Fibonacci Number](https://leetcode.com/problems/fibonacci-number/) | [Java]()                                                  | [easy]()    |
+| 2   |            | [70 Climbing Stairs](https://leetcode.com/problems/climbing-stairs/)    | [Java]()                                                  | [easy]()    |
+
+| Divide and Conquer |  DFS(recursion)   | divide，conquer，combine
+|divide: divide the problem into a set of subproblem
+|conquer: solve each subproblem recursively
+|combine: combine the results of each subproblem
+｜遇到子问题结果组合
+
+| #   | Algorithms | Title                                                                                        | Solution                                        | Difficulty  |
+|-----|------------|----------------------------------------------------------------------------------------------|-------------------------------------------------|-------------|
+| #   | 总结         |                                                                                              | [Java](./basic/recursion/DivideAndConquer.java) |             |
+| 1   |            | [98 Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree/) | [Java]()                                        | [easy]()    |
+
 | Backtracking |  DFS(recursion)   |本质就是想象成图，然后递归的DFS(有时可以剪枝)
+｜要求返回所有符合条件的结果
 
 | #             | Algorithms                  | Title                                                                                                            | Solution                                                                        | Difficulty |
 |---------------|-----------------------------|------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------|------------|

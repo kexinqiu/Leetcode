@@ -33,6 +33,7 @@ class Solution {
 	}
 }
 
+
 //格式2
 class Solution {
 	private int row;

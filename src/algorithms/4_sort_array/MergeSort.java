@@ -6,14 +6,14 @@ class Solution {
 	}
 
 	private void mergeSort(int[] nums, int start, int end){
-		if(start>=end) return;
+		if(start<end) {
+			int mid = start+(end-start)/2;
 
-		int mid = start+(end-start)/2;
+			mergeSort(nums, start, mid);
+			mergeSort(nums, mid+1, end);
 
-		mergeSort(nums, start, mid);
-		mergeSort(nums, mid+1, end);
-
-		merge(nums, start, end, mid);
+			merge(nums, start, end, mid);
+		}
 	}
 
 	private void merge(int[] nums, int start, int end, int mid){
