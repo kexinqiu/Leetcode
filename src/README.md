@@ -3,6 +3,13 @@
 
 ### LeetCode Problems
 
+| Array | Binary Search |
+
+| #   | Algorithms                                 | Title                                                                                                     | Solution                                   | Difficulty               |
+|-----|:-------------------------------------------|-----------------------------------------------------------------------------------------------------------|--------------------------------------------|--------------------------|
+| 1   | Binary Search Template  TC:O(logn)/SC:O(1) | [704 Binary Search](https://leetcode.com/problems/binary-search/description/)                             | [Java](./basic/template/BinarySearch.java) | [easy]()                 |
+
+
 | #   | Algorithms                                                        | Title                                                                                                                   | dSolution                                                                                 | Difficulty                                                           |
 |-----|:------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------|----------------------------------------------------------------------|
 | 1   | 双指针  O(n)                                                         | [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/)                                                     | [Java](./algorithms/1_valid_palindrome/ValidPalindrome.java)                              | [easy](./algorithms/1_valid_palindromem/README.md)                   |
