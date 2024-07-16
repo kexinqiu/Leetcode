@@ -6,7 +6,7 @@ public class BinarySearch {
 		int r = nums.length - 1;
 
 		while (l <= r) {
-			int mid = l + (r - l) / 2;
+			int mid = l + (r - l) / 2; // 防止溢出 等同于(left + right)/2
 			if (nums[mid] == target) return mid;
 			else if (nums[mid] > target) r = mid - 1;
 			else l = mid + 1;

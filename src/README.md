@@ -3,11 +3,13 @@
 
 ### LeetCode Problems
 
-| Array | Binary Search |
+| Array | Binary Search | 有序数组
 
-| #   | Algorithms                                 | Title                                                                                                     | Solution                                   | Difficulty               |
-|-----|:-------------------------------------------|-----------------------------------------------------------------------------------------------------------|--------------------------------------------|--------------------------|
-| 1   | Binary Search Template  TC:O(logn)/SC:O(1) | [704 Binary Search](https://leetcode.com/problems/binary-search/description/)                             | [Java](./basic/template/BinarySearch.java) | [easy]()                 |
+| #   | Algorithms                                   | Title                                                                                                                                 | Solution                                   | Difficulty |
+|-----|:---------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------|------------|
+| 1   | Binary Search Template  TC:O(logn)/SC:O(1)   | [704 Binary Search](https://leetcode.com/problems/binary-search/description/)                                                         | [Java](./basic/template/BinarySearch.java) | [easy]()   |
+| 2   | Binary Search 变形  TC:O(logn)/SC:O(1)         | [35 Search Insert Position](https://leetcode.com/problems/search-insert-position/description/)                                        | [Java](./basic/template/BinarySearch.java) | [easy]()   |
+| 3   | Binary Search 变形  TC:O(logn)/SC:O(1)         | [34 Find First and Last Position](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/description/) | [Java](./basic/template/BinarySearch.java) | [medium]() |
 
 
 | #   | Algorithms                                                        | Title                                                                                                                   | dSolution                                                                                 | Difficulty                                                           |
