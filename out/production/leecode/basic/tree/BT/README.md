@@ -6,7 +6,7 @@
           Preorder              Inorder           Postorder         Iterative with queue
     /      |         \         /   |   \           /   |   \ 
 Iterative  Recursive  Morris   
-with stack
+Recursive with stack
 
 
 DFS Preorder:               DFS Inorder:             DFS Postorder:
